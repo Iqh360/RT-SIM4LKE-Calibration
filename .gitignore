@@ -1,0 +1,7 @@
+# local-only notes and scratch (this repo is public)
+AGENTS.md
+*.preview*.html
+*.next.*
+*.final.*
+_next/
+scratch/
