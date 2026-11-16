@@ -1,6 +1,6 @@
 # You paid for a tune. The car feels no different.
 
-**[SIM4LKE Verified — the offer in one page](https://iqh360.github.io/RT-Sim4lkeEditorTuner/)**
+**[SIM4LKE ECU Calibration — the offer in one page](https://iqh360.github.io/RT-SIM4LKE-Calibration/)**
 
 Sometimes nothing changed at all. Sometimes the wrong table was touched and the car got worse.
 Occasionally it did something the engine will pay for later. All three feel identical from the
@@ -95,7 +95,7 @@ You already own the answer. It is sitting in the file on your laptop, and it has
 engine this whole time.
 
 **huyezarc@gmail.com** · SIM4LKE ECU only · your file stays private
-**Everything about the service, in one page:** https://iqh360.github.io/RT-Sim4lkeEditorTuner/
+**Everything about the service, in one page:** https://iqh360.github.io/RT-SIM4LKE-Calibration/
 
 ## One ECU. We are not shy about saying no.
 
@@ -111,4 +111,4 @@ you is exactly what your ECU is being asked to do — and that is the part nobod
 
 ---
 
-**[Start here →](https://iqh360.github.io/RT-Sim4lkeEditorTuner/)** · huyezarc@gmail.com
+**[Start here →](https://iqh360.github.io/RT-SIM4LKE-Calibration/)** · huyezarc@gmail.com
