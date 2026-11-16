@@ -1,5 +1,7 @@
 # You paid for a tune. The car feels no different.
 
+**[SIM4LKE Verified — the offer in one page](https://iqh360.github.io/RT-Sim4lkeEditorTuner/)**
+
 Sometimes nothing changed at all. Sometimes the wrong table was touched and the car got worse.
 Occasionally it did something the engine will pay for later. All three feel identical from the
 driver's seat — the file is the only thing that tells them apart.
@@ -9,6 +11,22 @@ driver's seat — the file is the only thing that tells them apart.
 We would rather show you the work than describe it.
 
 ---
+
+## Services
+
+One ECU. One job: read the calibration the way the firmware reads it, and tell you what it is
+actually instructing your engine to do.
+
+| Service | What you send | What you get back |
+|---|---|---|
+| **Tune verification** | The file the car has been running | Every edited table traced to the code that reads it, every changed byte against a clean read, and a verdict: placebo, worse, or working as intended. |
+| **Bought file, no explanation** | The file someone sold you | What is inside it, what it was trying to do, and what it will do to the engine the moment it is written. |
+| **Stock ROM reference** | A clean read of the same ECU | A proven baseline to measure anything against, so a change can be judged instead of argued about. |
+| **Read integrity check** | Any read off the car | Whether it is whole, complete and safe to write back — or a file that should never go near an ECU. |
+| **Protection audit** | A tune or a stock file | Whether derate, torque limiting, overspeed and limp paths are still armed, softened, or switched off. |
+
+**One line is enough.** You do not need part numbers, ROM IDs, table names or a tool list. Working
+out what the numbers mean is our job, and it is the only thing we do.
 
 ## Placebo, worse, or a bill you have not received yet
 
@@ -77,6 +95,7 @@ You already own the answer. It is sitting in the file on your laptop, and it has
 engine this whole time.
 
 **huyezarc@gmail.com** · SIM4LKE ECU only · your file stays private
+**Everything about the service, in one page:** https://iqh360.github.io/RT-Sim4lkeEditorTuner/
 
 ## One ECU. We are not shy about saying no.
 
@@ -84,10 +103,12 @@ The Siemens SIM4LKE ECU: C180K, C200K and C230K Kompressor in the Mercedes W203,
 A209 and R171. If your file is not from one of those, it is a different engine management system with
 a different layout, and we will say so instead of inventing an answer.
 
+SIM4LSE and SIM4LE are different ECUs with different layouts. No answer will be invented for them.
+
 **What a file cannot tell you.** It cannot tell you the condition of your pistons, your fuel pump or
 your intercooler. Anyone who promises "safe" without seeing the engine is guessing. What we can tell
 you is exactly what your ECU is being asked to do — and that is the part nobody has ever checked.
 
 ---
 
-huyezarc@gmail.com
+**[Start here →](https://iqh360.github.io/RT-Sim4lkeEditorTuner/)** · huyezarc@gmail.com
