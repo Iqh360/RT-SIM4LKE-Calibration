@@ -13,27 +13,12 @@ body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);f
 a{color:inherit;text-decoration:none}
 .mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
 
-/* paper stack backdrop */
-.paperstack{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-.paperstack i{position:absolute;display:block;background:#fff;border:1px solid #E6E6DF;box-shadow:0 18px 40px rgba(10,10,10,.06)}
-.paperstack i:nth-child(1){top:-6vh;left:-8vw;width:62vw;height:74vh;transform:rotate(-4.2deg)}
-.paperstack i:nth-child(2){top:8vh;right:-14vw;width:48vw;height:64vh;transform:rotate(3.4deg);background:#FCFCFA}
-.paperstack i:nth-child(3){bottom:-16vh;left:18vw;width:70vw;height:40vh;transform:rotate(-1.6deg);background:#FAFAF7}
-.paperstack:after{content:"";position:absolute;inset:0;
-  background:linear-gradient(to bottom,rgba(255,255,255,.72),rgba(255,255,255,.94) 40%,#fff 78%)}
-header,.hero,.scopebar,section,.offer,footer{position:relative;z-index:1}
+header,section,.offer,footer{position:relative;z-index:1}
 
 /* header */
 header{background:var(--ink);color:#fff}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:26px;padding:15px 0}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.02em;font-size:15px;text-transform:uppercase}
-.brand .mark{border:1.5px solid #fff;padding:3px 5px;font-family:var(--mono);font-size:10px;letter-spacing:.12em}
-.bar .mono{color:#A5A5A5}
-.bar nav{display:flex;gap:24px;font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#A5A5A5}
-.bar nav a:hover{color:#fff}
 
 /* hero */
-.hero{display:grid;grid-template-columns:1fr 300px;gap:54px;padding:72px 0 56px;border-bottom:2px solid var(--ink)}
 h1{font-size:clamp(44px,6vw,84px);line-height:.93;letter-spacing:-.045em;margin:20px 0 26px;font-weight:800;
   text-transform:uppercase;text-wrap:balance}
 h1 .cut{color:var(--accent);display:inline-block}
@@ -47,24 +32,6 @@ h1 .cut{color:var(--accent);display:inline-block}
 .btn.line:hover{background:var(--ink);color:#fff}
 .free{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase}
 .free b{background:var(--ink);color:#fff;padding:3px 7px;font-weight:400}
-
-/* hero side */
-.side{border-left:2px solid var(--ink);padding-left:26px;perspective:900px}
-.side .row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--rule)}
-.side .row:first-child{border-top:1px solid var(--rule)}
-.side .row span:last-child{font-weight:700;font-size:13px}
-.slab3d{margin:22px 0 20px;border:1px solid #DCDCD6;background:#fff;
-  box-shadow:14px 16px 0 -6px #EFEFE9,30px 34px 0 -14px #F6F6F1;
-  transform:rotateY(-5deg) rotateX(4deg);transform-origin:left top;transition:transform .5s ease}
-.slab3d:hover{transform:rotateY(-1deg) rotateX(1deg)}
-.slab3d svg{display:block;width:100%;height:auto;filter:drop-shadow(0 10px 14px rgba(10,10,10,.07))}
-.stamp{width:100%;height:auto;display:block}
-
-/* scope bar */
-.scopebar{border-bottom:2px solid var(--ink);border-top:0;background:var(--tint)}
-.scopebar .in{display:flex;gap:34px;flex-wrap:wrap;padding:13px 0;font-family:var(--mono);font-size:10px;
-  letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
-.scopebar b{color:var(--ink)}
 
 /* sections */
 section{padding:74px 0;border-bottom:1px solid var(--rule)}
@@ -126,11 +93,9 @@ footer{padding:26px 0 44px;display:flex;justify-content:space-between;gap:18px;f
 footer a{color:#fff}
 
 @media(max-width:940px){
-  .hero{grid-template-columns:1fr;gap:34px;padding:48px 0 40px}
-  .side{border-left:0;padding-left:0;border-top:2px solid var(--ink);padding-top:22px}
-  .slab3d{transform:none;box-shadow:none}
   .three{grid-template-columns:1fr}
   .three article{border-right:0;border-bottom:1px solid var(--rule)}
+  .three article:last-child{border-bottom:0}
   .checklist .row{grid-template-columns:30px 1fr;gap:12px}
   .checklist .a{grid-column:2}
   .stack3d{grid-template-columns:1fr;gap:18px}
@@ -138,9 +103,9 @@ footer a{color:#fff}
   .steps{grid-template-columns:1fr;gap:18px}
   .steps .s{border-left:0;padding-left:0}
   .offer .in{grid-template-columns:1fr}
-  .paperstack{display:none}
+  .offer .btn{justify-content:center}
   .wrap{padding:0 20px}
-  .bar nav{display:none}
+  section{padding:56px 0}
 }
 
 /* ── M4 hero: dark blueprint canvas (M1) + dossier type (M2) + bench motion (M3) ── */
@@ -167,7 +132,7 @@ body{background:var(--white)}
 @keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(196,36,44,.5)}
   60%{opacity:.55;box-shadow:0 0 0 9px rgba(196,36,44,0)}}
 
-.heroin{display:grid;grid-template-columns:1fr 440px;gap:44px;padding:48px 0 62px;align-items:center}
+.heroin{display:grid;grid-template-columns:1fr 440px;gap:44px;padding-block:48px 62px;align-items:center}
 .heroin h1{font-size:clamp(36px,4.8vw,68px);line-height:.94;letter-spacing:-.04em;margin:14px 0 20px;
   font-weight:800;text-transform:uppercase;color:#fff}
 .heroin h1 .cut{color:var(--accent);display:inline-block}
@@ -264,24 +229,72 @@ body{background:var(--white)}
 .hero-dark .mono{color:#F26A5C}
 /* the offer label ships an inline colour; a small mono label needs 4.5:1 on near-black */
 .offer .mono{color:#F26A5C!important}
-@media(max-width:1040px){
-  .heroin{grid-template-columns:1fr;gap:24px;padding:34px 0 50px}
-  .stage{height:350px}
-  .scene{left:0;width:238px;height:150px}
-  .f-front,.f-back{width:238px;height:150px}
-  .f-left,.f-right{width:92px;height:150px}
-  .f-top,.f-bottom{width:238px;height:92px}
-  .f-left{transform:rotateY(-90deg) translateX(-46px)}
-  .f-right{transform:rotateY(90deg) translateX(46px)}
-  .f-top{transform:rotateX(90deg) translateY(-46px)}
-  .f-bottom{transform:rotateX(-90deg) translateY(46px)}
-  .f-front{transform:translateZ(46px)}.f-back{transform:rotateY(180deg) translateZ(46px)}
-  .deck{transform:translateZ(47px)}
-  .chipcard{width:150px;height:96px}
+/* ── measured responsive fixes ── */
+.hdbar{flex-wrap:wrap;row-gap:8px}
+.stage{width:100%;max-width:460px}
+.stamp2{right:6px}
+footer a{display:inline-block;padding:6px 0;min-height:24px;line-height:1.4}
+svg{max-width:100%}
+
+/* one ladder: 1180 stack the hero, 940 stack the body, 560 phone grids, 420 narrow hero */
+@media(max-width:1180px){
+  .heroin{grid-template-columns:1fr minmax(340px,440px);gap:34px;padding-block:38px 46px}
+  .stage{justify-self:end}
+  .hdnav{display:none}
   .iconrow{grid-template-columns:repeat(3,1fr)}
   .iconrow .ic:nth-child(3n){border-right:0}
   .scoperow{grid-template-columns:repeat(2,1fr)}
-  .hdnav{display:none}
+  .scoperow div:nth-child(2n){border-right:0}
+  .scoperow div:nth-child(-n+2){border-bottom:1px solid var(--rule)}
+}
+@media(max-width:900px){
+  .heroin{grid-template-columns:1fr;gap:20px;padding-block:32px 40px}
+  .stage{max-width:460px;justify-self:center;height:clamp(280px,40vw,380px)}
+  .ribbon{height:76px}
+}
+@media(min-width:600px) and (max-width:940px){
+  .heroin h1{font-size:clamp(40px,5vw,54px)}
+  h2{font-size:clamp(30px,4vw,38px)}
+}
+@media(max-width:560px){
+  .iconrow{grid-template-columns:repeat(2,1fr)}
+  .iconrow .ic:nth-child(3n){border-right:1px solid var(--rule)}
+  .iconrow .ic:nth-child(2n){border-right:0}
+  .scoperow{grid-template-columns:1fr}
+  .scoperow div{border-right:0;border-bottom:1px solid var(--rule)}
+  .scoperow div:last-child{border-bottom:0}
+  .heroin h1{font-size:clamp(32px,9.2vw,42px)}
+  .iconrow svg{height:58px}
+}
+@media(max-width:500px){
+  .stage{height:340px;max-width:none}
+  .scene{top:0;left:50%;margin-left:-135px}
+  .chipcard{top:auto;bottom:0;right:auto;left:50%;margin-left:-75px;width:150px;height:96px}
+  .ribbon{display:none}
+  .stamp2{display:none}
+}
+@media(max-width:420px){
+  .heroin{padding-block:24px 30px}
+  .heroin h1{font-size:clamp(29px,8.8vw,34px)}
+  .heroin .lede{font-size:16px}
+  .cta{gap:12px}
+  .cta .btn{width:100%;justify-content:center}
+  .live{display:none}
+}
+@media(max-height:820px){
+  .heroin{padding-block:26px 34px;gap:18px}
+  .heroin h1{font-size:clamp(32px,4vw,56px);margin:10px 0 14px}
+  .heroin .lede{font-size:16px;margin-bottom:18px}
+  .stage{height:clamp(280px,32vw,340px)}
+}
+@media(max-height:560px) and (orientation:landscape){
+  .stage{display:none}
+  .heroin{padding-block:14px 20px}
+  .heroin h1{font-size:clamp(26px,3vw,38px);margin:8px 0 12px}
+  .heroin .lede{display:none}
+}
+@media(min-width:1600px){
+  .wrap{max-width:1240px}
 }
 @media(prefers-reduced-motion:reduce){
   .scene,.chipcard,.ribbon path,.ribbon circle,.stamp2,.live i{animation:none!important}
