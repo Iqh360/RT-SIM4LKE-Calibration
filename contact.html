@@ -89,11 +89,13 @@
 <section class="wrap">
   <div class="lab"><span class="n">03</span><h2>SIM4LKE ECU or nothing</h2><span class="t"></span></div>
   <div class="checklist">
-    <div class="row"><span class="i">01</span><span class="q">In scope</span><span class="a">The Siemens
-      SIM4LKE ECU: C180K, C200K and C230K Kompressor in the Mercedes W203, CL203, S203, C209, A209 and R171.</span></div>
-    <div class="row"><span class="i">02</span><span class="q">Out of scope</span><span class="a">SIM4LSE and
-      SIM4LE are different ECUs with different layouts. No answer will be invented for them, and anything that
-      is not a 1 MiB SIM4LKE read is identified as such.</span></div>
+    <div class="row"><span class="i">01</span><span class="q">In scope</span><span class="a">The Siemens SIM4LKE ECU only, 1 MiB /
+      29F800: C180K, C200K and C230K (1.8 Kompressor) in the W203, S203 and CL203; CLK 200K in the C209 and
+      A209; E 200K in the W211 (163 and 184 hp); SLK 200K in the R171.</span></div>
+    <div class="row"><span class="i">02</span><span class="q">Out of scope</span><span class="a">Different ECUs, not a smaller
+      version of this one: SIM4LSE and SIM4LE; the W204 and CLC (SIM271KE); the W212, C207 and R172; and every
+      CGI (SIM271DE). No answer will be invented for those, and any read that is not 1 MiB / 29F800 is
+      identified as such.</span></div>
     <div class="row"><span class="i">03</span><span class="q">Never</span><span class="a">No remote connection
       to your car, no flashing on your behalf, and no promise that a file is safe for an engine nobody has
       looked at.</span></div>
@@ -110,10 +112,12 @@
       <p>You already own the answer. It is in the file on your laptop, and it has been running your engine
         this whole time.</p>
       <div class="scope2">
-        <b>SIEMENS SIM4LKE ECU ONLY</b><br>
-        C180K &#183; C200K &#183; C230K KOMPRESSOR<br>
-        W203 &#183; CL203 &#183; S203 &#183; C209 &#183; A209 &#183; R171<br>
-        SIM4LSE / SIM4LE &#8212; WE DO NOT INVENT ANSWERS<br>
+        <b>SIEMENS SIM4LKE ECU ONLY &#183; 1 MiB / 29F800</b><br>
+        C180K &#183; C200K &#183; C230K (1.8 K) &#8212; W203 &#183; S203 &#183; CL203<br>
+        CLK 200K &#8212; C209 &#183; A209<br>
+        E 200K &#8212; W211 (163 &amp; 184 HP)<br>
+        SLK 200K &#8212; R171<br>
+        NOT SIM4LKE: W204 &#183; CLC &#183; W212 &#183; R172 &#183; CGI &#183; SIM4LSE &#183; SIM4LE<br>
         YOUR FILE STAYS PRIVATE
       </div>
     </div>
