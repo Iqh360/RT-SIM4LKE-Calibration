@@ -4,213 +4,146 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SIM4LKE ECU Calibration — file verification, first two files free</title>
-<meta name="description" content="You paid for a tune. The car feels the same. Send your Siemens SIM4LKE ECU file — tune, stock ROM or a read off the car — and find out what is really in it. First two files free.">
+<meta name="description" content="You paid for a tune and the car feels the same. Send your Siemens SIM4LKE ECU file — a tune, a stock ROM or a read off the car — and find out what is really in it. First two free.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<div class="paperstack" aria-hidden="true"><i></i><i></i><i></i></div>
 
-<header class="site">
-  <div class="wrap">
+<header>
+  <div class="wrap bar">
     <a class="brand" href="index.html"><span class="mark">RT</span> SIM4LKE ECU Calibration</a>
-    <nav class="main">
-      <a href="#placebo">Placebo or worse</a>
-      <a href="#checks">What we check</a>
-      <a href="#method">How we know</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn cta-sm" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send your file</a>
-    </nav>
+    <div class="mono">verification dossier &#183; sim4lke only</div>
+    <nav><a href="#outcomes">Outcomes</a><a href="#checks">Checks</a><a href="contact.html">Contact</a></nav>
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <span class="kicker">Siemens SIM4LKE ECU &middot; Mercedes W203 &middot; CL203 &middot; S203 &middot; C209 &middot; A209 &middot; R171</span>
-    <h1>You paid for a tune. The car feels no different.</h1>
-    <p class="lede">
-      Sometimes nothing changed at all. Sometimes the wrong table was touched and the car got
-      worse. Occasionally it did something the engine will pay for later. All three feel identical
-      from the driver's seat &mdash; the file is the only thing that tells them apart.
-    </p>
-    <div class="cta">
-      <a class="btn" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send your first file</a>
-      <a class="btn ghost" href="#checks">What we check</a>
-    </div>
-    <p class="subnote">First two files free. No account, no portal, nothing installed.</p>
-    <ul class="facts">
-      <li><span class="k">Scope</span><span class="v">SIM4LKE ECU</span><span class="s">nothing else</span></li>
-      <li><span class="k">You send</span><span class="v">Tune or ROM</span><span class="s">any read of it</span></li>
-      <li><span class="k">Evidence</span><span class="v">Byte-level</span><span class="s">traced to code</span></li>
-      <li><span class="k">First two</span><span class="v">Free</span><span class="s">then talk</span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="tight">
-  <div class="wrap">
-    <div class="callout">
-      <p><strong>Your first two files are free.</strong> Send one, we read it properly, you decide
-      what to do with the answer. No card, no sign-up, no "consultation" that never gets to the
-      point. We would rather show you the work than describe it.</p>
-    </div>
-  </div>
-</section>
-
-<section id="placebo">
-  <div class="wrap">
-    <span class="eyebrow">Three outcomes</span>
-    <h2>Placebo, worse, or a bill you have not received yet.</h2>
-    <p class="lead">
-      A bought tune lands in one of three places. Only one of them is ever advertised, and none of
-      them can be told apart by how the car pulls on a test drive.
-    </p>
-    <div class="grid">
-      <div class="card">
-        <span class="num">01</span>
-        <h3>Placebo</h3>
-        <p>Tables edited, exported, flashed &mdash; and never read by the firmware. The car is
-        exactly what it was. You paid for a file that does nothing, and the placebo does the rest:
-        it always feels a little sharper after you have handed over money.</p>
-      </div>
-      <div class="card">
-        <span class="num">02</span>
-        <h3>Worse</h3>
-        <p>Throttle response flattened, a limiter lifted that should have stayed, timing raised into
-        cells where knock control now fights it constantly. The car is slower, hotter, or both, and
-        nothing on the dash explains why.</p>
-      </div>
-      <div class="card">
-        <span class="num">03</span>
-        <h3>Working &mdash; against the engine</h3>
-        <p>Lean under load, or advance the engine was never built for. It pulls hard, so it feels
-        like the best money you ever spent. The bill arrives later, at full throttle, in fourth
-        gear.</p>
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <div class="mono" style="color:var(--accent)">Siemens SIM4LKE ECU &#183; Mercedes W203 &#183; CL203 &#183; S203 &#183; C209 &#183; A209 &#183; R171</div>
+      <h1>You paid<br>for a tune.<br><span class="cut">The car feels</span><br><span class="cut">no different.</span></h1>
+      <p class="lede">Sometimes nothing changed at all. Sometimes the wrong table was touched and the car got
+        worse. Occasionally it did something the engine will pay for later. All three feel identical from the
+        driver's seat &#8212; the file is the only thing that tells them apart.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send your first file <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11M7 2l5 5-5 5" stroke="currentColor" stroke-width="2"/></svg></a>
+        <a class="btn line" href="#checks">What we check</a>
+        <span class="free">First two files <b>free</b></span>
       </div>
     </div>
-    <div class="callout warn" style="margin-top:44px">
-      <p><strong>None of it shows up as a fault code.</strong> The ECU does exactly what the file
-      says. If the file says something wrong, it does it perfectly, every time, until something
-      lets go.</p>
+    <aside class="side">
+      <div class="row"><span class="mono">Scope</span><span>SIM4LKE only</span></div>
+      <div class="row"><span class="mono">You send</span><span>Tune / ROM / read</span></div>
+      <div class="row"><span class="mono">Evidence</span><span>Byte &#8594; code</span></div>
+      <div class="row"><span class="mono">First two</span><span>Free</span></div>
+      <div class="slab3d"><svg viewBox="0 0 300 214" role="img" aria-label="Isometric wireframe of a 16 by 12 ignition surface with one sampled cell"><path d="M150.0 140.4L540.0 365.4M124.0 155.4L514.0 380.4M98.0 170.4L488.0 395.4M72.0 185.4L462.0 410.4M46.0 200.4L436.0 425.4M20.0 215.4L410.0 440.4M-6.0 230.4L384.0 455.4M-32.0 245.4L358.0 470.4M-58.0 260.4L332.0 485.4M-84.0 275.4L306.0 500.4M-110.0 290.4L280.0 515.4M-136.0 305.4L254.0 530.4M150.0 140.4L-136.0 305.4M176.0 155.4L-110.0 320.4M202.0 170.4L-84.0 335.4M228.0 185.4L-58.0 350.4M254.0 200.4L-32.0 365.4M280.0 215.4L-6.0 380.4M306.0 230.4L20.0 395.4M332.0 245.4L46.0 410.4M358.0 260.4L72.0 425.4M384.0 275.4L98.0 440.4M410.0 290.4L124.0 455.4M436.0 305.4L150.0 470.4M462.0 320.4L176.0 485.4M488.0 335.4L202.0 500.4M514.0 350.4L228.0 515.4M540.0 365.4L254.0 530.4" fill="none" stroke="#E2E2DA" stroke-width="1"/><path d="M150.0 95.0L150.0 140.4M124.0 109.8L124.0 155.4M98.0 124.6L98.0 170.4M72.0 139.4L72.0 185.4M46.0 154.1L46.0 200.4M20.0 168.9L20.0 215.4M-6.0 183.7L-6.0 230.4M-32.0 198.5L-32.0 245.4M-58.0 213.3L-58.0 260.4M-84.0 228.1L-84.0 275.4M-110.0 242.9L-110.0 290.4M-136.0 257.6L-136.0 305.4M-110.0 261.7L-110.0 320.4M-84.0 264.2L-84.0 335.4M-58.0 266.4L-58.0 350.4M-32.0 271.1L-32.0 365.4M-6.0 280.5L-6.0 380.4M20.0 295.7L20.0 395.4M46.0 315.2L46.0 410.4M72.0 336.6L72.0 425.4M98.0 358.2L98.0 440.4M124.0 380.0L124.0 455.4M150.0 404.9L150.0 470.4M176.0 435.0L176.0 485.4M202.0 461.3L202.0 500.4M228.0 476.2L228.0 515.4M254.0 489.8L254.0 530.4M280.0 475.6L280.0 515.4M306.0 460.0L306.0 500.4M332.0 443.5L332.0 485.4M358.0 427.1L358.0 470.4M384.0 411.4L384.0 455.4M410.0 396.1L410.0 440.4M436.0 381.0L436.0 425.4M462.0 366.0L462.0 410.4M488.0 351.0L488.0 395.4M514.0 336.0L514.0 380.4M540.0 321.0L540.0 365.4M514.0 303.5L514.0 350.4M488.0 286.1L488.0 335.4M462.0 268.9L462.0 320.4M436.0 251.9L436.0 305.4M410.0 235.0L410.0 290.4M384.0 218.0L384.0 275.4M358.0 201.0L358.0 260.4M332.0 184.0L332.0 245.4M306.0 167.8L306.0 230.4M280.0 152.9L280.0 215.4M254.0 139.8L254.0 200.4M228.0 128.1L228.0 185.4M202.0 117.3L202.0 170.4M176.0 106.4L176.0 155.4" fill="none" stroke="#8C8C86" stroke-width="0.7" opacity="0.55"/><path d="M150.0 95.0L176.0 106.4L150.0 120.5L124.0 109.8Z" fill="#EDEDE8" fill-opacity="0.24" stroke="none" stroke-width="0"/><path d="M176.0 106.4L202.0 117.3L176.0 130.6L150.0 120.5Z" fill="#F6F6F1" fill-opacity="0.27" stroke="none" stroke-width="0"/><path d="M124.0 109.8L150.0 120.5L124.0 134.6L98.0 124.6Z" fill="#F6F6F1" fill-opacity="0.25" stroke="none" stroke-width="0"/><path d="M202.0 117.3L228.0 128.1L202.0 140.7L176.0 130.6Z" fill="#EDEDE8" fill-opacity="0.31" stroke="none" stroke-width="0"/><path d="M150.0 120.5L176.0 130.6L150.0 144.0L124.0 134.6Z" fill="#EDEDE8" fill-opacity="0.28" stroke="none" stroke-width="0"/><path d="M98.0 124.6L124.0 134.6L98.0 148.7L72.0 139.4Z" fill="#EDEDE8" fill-opacity="0.25" stroke="none" stroke-width="0"/><path d="M228.0 128.1L254.0 139.8L228.0 151.7L202.0 140.7Z" fill="#F6F6F1" fill-opacity="0.34" stroke="none" stroke-width="0"/><path d="M176.0 130.6L202.0 140.7L176.0 153.3L150.0 144.0Z" fill="#F6F6F1" fill-opacity="0.32" stroke="none" stroke-width="0"/><path d="M124.0 134.6L150.0 144.0L124.0 157.3L98.0 148.7Z" fill="#F6F6F1" fill-opacity="0.29" stroke="none" stroke-width="0"/><path d="M72.0 139.4L98.0 148.7L72.0 162.8L46.0 154.1Z" fill="#F6F6F1" fill-opacity="0.25" stroke="none" stroke-width="0"/><path d="M254.0 139.8L280.0 152.9L254.0 164.5L228.0 151.7Z" fill="#EDEDE8" fill-opacity="0.36" stroke="none" stroke-width="0"/><path d="M202.0 140.7L228.0 151.7L202.0 163.6L176.0 153.3Z" fill="#EDEDE8" fill-opacity="0.36" stroke="none" stroke-width="0"/><path d="M150.0 144.0L176.0 153.3L150.0 165.8L124.0 157.3Z" fill="#EDEDE8" fill-opacity="0.34" stroke="none" stroke-width="0"/><path d="M98.0 148.7L124.0 157.3L98.0 170.7L72.0 162.8Z" fill="#EDEDE8" fill-opacity="0.30" stroke="none" stroke-width="0"/><path d="M46.0 154.1L72.0 162.8L46.0 177.0L20.0 168.9Z" fill="#EDEDE8" fill-opacity="0.26" stroke="none" stroke-width="0"/><path d="M280.0 152.9L306.0 167.8L280.0 179.4L254.0 164.5Z" fill="#F6F6F1" fill-opacity="0.37" stroke="none" stroke-width="0"/><path d="M228.0 151.7L254.0 164.5L228.0 176.1L202.0 163.6Z" fill="#F6F6F1" fill-opacity="0.39" stroke="none" stroke-width="0"/><path d="M176.0 153.3L202.0 163.6L176.0 175.6L150.0 165.8Z" fill="#F6F6F1" fill-opacity="0.38" stroke="none" stroke-width="0"/><path d="M124.0 157.3L150.0 165.8L124.0 178.4L98.0 170.7Z" fill="#F6F6F1" fill-opacity="0.35" stroke="none" stroke-width="0"/><path d="M72.0 162.8L98.0 170.7L72.0 184.0L46.0 177.0Z" fill="#F6F6F1" fill-opacity="0.31" stroke="none" stroke-width="0"/><path d="M20.0 168.9L46.0 177.0L20.0 191.1L-6.0 183.7Z" fill="#F6F6F1" fill-opacity="0.26" stroke="none" stroke-width="0"/><path d="M306.0 167.8L332.0 184.0L306.0 196.0L280.0 179.4Z" fill="#EDEDE8" fill-opacity="0.36" stroke="none" stroke-width="0"/><path d="M254.0 164.5L280.0 179.4L254.0 191.0L228.0 176.1Z" fill="#EDEDE8" fill-opacity="0.40" stroke="none" stroke-width="0"/><path d="M202.0 163.6L228.0 176.1L202.0 187.7L176.0 175.6Z" fill="#EDEDE8" fill-opacity="0.41" stroke="none" stroke-width="0"/><path d="M150.0 165.8L176.0 175.6L150.0 187.5L124.0 178.4Z" fill="#EDEDE8" fill-opacity="0.40" stroke="none" stroke-width="0"/><path d="M98.0 170.7L124.0 178.4L98.0 191.0L72.0 184.0Z" fill="#EDEDE8" fill-opacity="0.37" stroke="none" stroke-width="0"/><path d="M46.0 177.0L72.0 184.0L46.0 197.4L20.0 191.1Z" fill="#EDEDE8" fill-opacity="0.32" stroke="none" stroke-width="0"/><path d="M-6.0 183.7L20.0 191.1L-6.0 205.2L-32.0 198.5Z" fill="#EDEDE8" fill-opacity="0.27" stroke="none" stroke-width="0"/><path d="M332.0 184.0L358.0 201.0L332.0 213.3L306.0 196.0Z" fill="#F6F6F1" fill-opacity="0.35" stroke="none" stroke-width="0"/><path d="M280.0 179.4L306.0 196.0L280.0 207.9L254.0 191.0Z" fill="#F6F6F1" fill-opacity="0.39" stroke="none" stroke-width="0"/><path d="M228.0 176.1L254.0 191.0L228.0 202.7L202.0 187.7Z" fill="#F6F6F1" fill-opacity="0.42" stroke="none" stroke-width="0"/><path d="M176.0 175.6L202.0 187.7L176.0 199.3L150.0 187.5Z" fill="#F6F6F1" fill-opacity="0.43" stroke="none" stroke-width="0"/><path d="M124.0 178.4L150.0 187.5L124.0 199.4L98.0 191.0Z" fill="#F6F6F1" fill-opacity="0.42" stroke="none" stroke-width="0"/><path d="M72.0 184.0L98.0 191.0L72.0 203.6L46.0 197.4Z" fill="#F6F6F1" fill-opacity="0.39" stroke="none" stroke-width="0"/><path d="M20.0 191.1L46.0 197.4L20.0 210.7L-6.0 205.2Z" fill="#F6F6F1" fill-opacity="0.33" stroke="none" stroke-width="0"/><path d="M-32.0 198.5L-6.0 205.2L-32.0 219.3L-58.0 213.3Z" fill="#F6F6F1" fill-opacity="0.27" stroke="none" stroke-width="0"/><path d="M358.0 201.0L384.0 218.0L358.0 230.8L332.0 213.3Z" fill="#EDEDE8" fill-opacity="0.33" stroke="none" stroke-width="0"/><path d="M306.0 196.0L332.0 213.3L306.0 225.6L280.0 207.9Z" fill="#EDEDE8" fill-opacity="0.37" stroke="none" stroke-width="0"/><path d="M254.0 191.0L280.0 207.9L254.0 219.8L228.0 202.7Z" fill="#EDEDE8" fill-opacity="0.41" stroke="none" stroke-width="0"/><path d="M202.0 187.7L228.0 202.7L202.0 214.3L176.0 199.3Z" fill="#EDEDE8" fill-opacity="0.45" stroke="none" stroke-width="0"/><path d="M150.0 187.5L176.0 199.3L150.0 210.9L124.0 199.4Z" fill="#EDEDE8" fill-opacity="0.46" stroke="none" stroke-width="0"/><path d="M98.0 191.0L124.0 199.4L98.0 211.4L72.0 203.6Z" fill="#EDEDE8" fill-opacity="0.44" stroke="none" stroke-width="0"/><path d="M46.0 197.4L72.0 203.6L46.0 216.1L20.0 210.7Z" fill="#EDEDE8" fill-opacity="0.40" stroke="none" stroke-width="0"/><path d="M-6.0 205.2L20.0 210.7L-6.0 224.1L-32.0 219.3Z" fill="#EDEDE8" fill-opacity="0.34" stroke="none" stroke-width="0"/><path d="M-58.0 213.3L-32.0 219.3L-58.0 233.5L-84.0 228.1Z" fill="#EDEDE8" fill-opacity="0.28" stroke="none" stroke-width="0"/><path d="M384.0 218.0L410.0 235.0L384.0 248.1L358.0 230.8Z" fill="#F6F6F1" fill-opacity="0.32" stroke="none" stroke-width="0"/><path d="M332.0 213.3L358.0 230.8L332.0 243.5L306.0 225.6Z" fill="#F6F6F1" fill-opacity="0.35" stroke="none" stroke-width="0"/><path d="M280.0 207.9L306.0 225.6L280.0 238.0L254.0 219.8Z" fill="#F6F6F1" fill-opacity="0.39" stroke="none" stroke-width="0"/><path d="M228.0 202.7L254.0 219.8L228.0 231.7L202.0 214.3Z" fill="#F6F6F1" fill-opacity="0.44" stroke="none" stroke-width="0"/><path d="M176.0 199.3L202.0 214.3L176.0 225.9L150.0 210.9Z" fill="#F6F6F1" fill-opacity="0.47" stroke="none" stroke-width="0"/><path d="M124.0 199.4L150.0 210.9L124.0 222.5L98.0 211.4Z" fill="#F6F6F1" fill-opacity="0.48" stroke="none" stroke-width="0"/><path d="M72.0 203.6L98.0 211.4L72.0 223.3L46.0 216.1Z" fill="#F6F6F1" fill-opacity="0.46" stroke="none" stroke-width="0"/><path d="M20.0 210.7L46.0 216.1L20.0 228.7L-6.0 224.1Z" fill="#F6F6F1" fill-opacity="0.42" stroke="none" stroke-width="0"/><path d="M-32.0 219.3L-6.0 224.1L-32.0 237.4L-58.0 233.5Z" fill="#F6F6F1" fill-opacity="0.35" stroke="none" stroke-width="0"/><path d="M-84.0 228.1L-58.0 233.5L-84.0 247.6L-110.0 242.9Z" fill="#F6F6F1" fill-opacity="0.28" stroke="none" stroke-width="0"/><path d="M410.0 235.0L436.0 251.9L410.0 265.3L384.0 248.1Z" fill="#EDEDE8" fill-opacity="0.30" stroke="none" stroke-width="0"/><path d="M358.0 230.8L384.0 248.1L358.0 261.2L332.0 243.5Z" fill="#EDEDE8" fill-opacity="0.33" stroke="none" stroke-width="0"/><path d="M306.0 225.6L332.0 243.5L306.0 256.2L280.0 238.0Z" fill="#EDEDE8" fill-opacity="0.37" stroke="none" stroke-width="0"/><path d="M254.0 219.8L280.0 238.0L254.0 250.3L228.0 231.7Z" fill="#EDEDE8" fill-opacity="0.42" stroke="none" stroke-width="0"/><path d="M202.0 214.3L228.0 231.7L202.0 243.6L176.0 225.9Z" fill="#EDEDE8" fill-opacity="0.46" stroke="none" stroke-width="0"/><path d="M150.0 210.9L176.0 225.9L150.0 237.5L124.0 222.5Z" fill="#EDEDE8" fill-opacity="0.50" stroke="none" stroke-width="0"/><path d="M98.0 211.4L124.0 222.5L98.0 234.1L72.0 223.3Z" fill="#EDEDE8" fill-opacity="0.51" stroke="none" stroke-width="0"/><path d="M46.0 216.1L72.0 223.3L46.0 235.2L20.0 228.7Z" fill="#EDEDE8" fill-opacity="0.49" stroke="none" stroke-width="0"/><path d="M-6.0 224.1L20.0 228.7L-6.0 241.3L-32.0 237.4Z" fill="#EDEDE8" fill-opacity="0.43" stroke="none" stroke-width="0"/><path d="M-58.0 233.5L-32.0 237.4L-58.0 250.8L-84.0 247.6Z" fill="#EDEDE8" fill-opacity="0.36" stroke="none" stroke-width="0"/><path d="M-110.0 242.9L-84.0 247.6L-110.0 261.7L-136.0 257.6Z" fill="#EDEDE8" fill-opacity="0.28" stroke="none" stroke-width="0"/><path d="M436.0 251.9L462.0 268.9L436.0 282.7L410.0 265.3Z" fill="#F6F6F1" fill-opacity="0.29" stroke="none" stroke-width="0"/><path d="M384.0 248.1L410.0 265.3L384.0 278.8L358.0 261.2Z" fill="#F6F6F1" fill-opacity="0.31" stroke="none" stroke-width="0"/><path d="M332.0 243.5L358.0 261.2L332.0 274.3L306.0 256.2Z" fill="#F6F6F1" fill-opacity="0.35" stroke="none" stroke-width="0"/><path d="M280.0 238.0L306.0 256.2L280.0 269.0L254.0 250.3Z" fill="#F6F6F1" fill-opacity="0.39" stroke="none" stroke-width="0"/><path d="M228.0 231.7L254.0 250.3L228.0 262.6L202.0 243.6Z" fill="#F6F6F1" fill-opacity="0.44" stroke="none" stroke-width="0"/><path d="M176.0 225.9L202.0 243.6L176.0 255.6L150.0 237.5Z" fill="#F6F6F1" fill-opacity="0.49" stroke="none" stroke-width="0"/><path d="M124.0 222.5L150.0 237.5L124.0 249.2L98.0 234.1Z" fill="#F6F6F1" fill-opacity="0.52" stroke="none" stroke-width="0"/><path d="M72.0 223.3L98.0 234.1L72.0 245.7L46.0 235.2Z" fill="#F6F6F1" fill-opacity="0.53" stroke="none" stroke-width="0"/><path d="M20.0 228.7L46.0 235.2L20.0 247.2L-6.0 241.3Z" fill="#F6F6F1" fill-opacity="0.51" stroke="none" stroke-width="0"/><path d="M-32.0 237.4L-6.0 241.3L-32.0 253.9L-58.0 250.8Z" fill="#F6F6F1" fill-opacity="0.45" stroke="none" stroke-width="0"/><path d="M-84.0 247.6L-58.0 250.8L-84.0 264.2L-110.0 261.7Z" fill="#F6F6F1" fill-opacity="0.37" stroke="none" stroke-width="0"/><path d="M462.0 268.9L488.0 286.1L462.0 300.3L436.0 282.7Z" fill="#EDEDE8" fill-opacity="0.27" stroke="none" stroke-width="0"/><path d="M410.0 265.3L436.0 282.7L410.0 296.5L384.0 278.8Z" fill="#EDEDE8" fill-opacity="0.30" stroke="none" stroke-width="0"/><path d="M358.0 261.2L384.0 278.8L358.0 292.2L332.0 274.3Z" fill="#EDEDE8" fill-opacity="0.33" stroke="none" stroke-width="0"/><path d="M306.0 256.2L332.0 274.3L306.0 287.4L280.0 269.0Z" fill="#EDEDE8" fill-opacity="0.36" stroke="none" stroke-width="0"/><path d="M254.0 250.3L280.0 269.0L254.0 281.7L228.0 262.6Z" fill="#EDEDE8" fill-opacity="0.41" stroke="none" stroke-width="0"/><path d="M202.0 243.6L228.0 262.6L202.0 275.0L176.0 255.6Z" fill="#EDEDE8" fill-opacity="0.46" stroke="none" stroke-width="0"/><path d="M150.0 237.5L176.0 255.6L150.0 267.5L124.0 249.2Z" fill="#EDEDE8" fill-opacity="0.51" stroke="none" stroke-width="0"/><path d="M98.0 234.1L124.0 249.2L98.0 260.8L72.0 245.7Z" fill="#EDEDE8" fill-opacity="0.55" stroke="none" stroke-width="0"/><path d="M46.0 235.2L72.0 245.7L46.0 257.3L20.0 247.2Z" fill="#EDEDE8" fill-opacity="0.56" stroke="none" stroke-width="0"/><path d="M-6.0 241.3L20.0 247.2L-6.0 259.1L-32.0 253.9Z" fill="#EDEDE8" fill-opacity="0.53" stroke="none" stroke-width="0"/><path d="M-58.0 250.8L-32.0 253.9L-58.0 266.4L-84.0 264.2Z" fill="#EDEDE8" fill-opacity="0.46" stroke="none" stroke-width="0"/><path d="M488.0 286.1L514.0 303.5L488.0 318.1L462.0 300.3Z" fill="#F6F6F1" fill-opacity="0.25" stroke="none" stroke-width="0"/><path d="M436.0 282.7L462.0 300.3L436.0 314.5L410.0 296.5Z" fill="#F6F6F1" fill-opacity="0.28" stroke="none" stroke-width="0"/><path d="M384.0 278.8L410.0 296.5L384.0 310.3L358.0 292.2Z" fill="#F6F6F1" fill-opacity="0.31" stroke="none" stroke-width="0"/><path d="M332.0 274.3L358.0 292.2L332.0 305.7L306.0 287.4Z" fill="#F6F6F1" fill-opacity="0.34" stroke="none" stroke-width="0"/><path d="M280.0 269.0L306.0 287.4L280.0 300.5L254.0 281.7Z" fill="#F6F6F1" fill-opacity="0.38" stroke="none" stroke-width="0"/><path d="M228.0 262.6L254.0 281.7L228.0 294.5L202.0 275.0Z" fill="#F6F6F1" fill-opacity="0.43" stroke="none" stroke-width="0"/><path d="M176.0 255.6L202.0 275.0L176.0 287.3L150.0 267.5Z" fill="#F6F6F1" fill-opacity="0.48" stroke="none" stroke-width="0"/><path d="M124.0 249.2L150.0 267.5L124.0 279.4L98.0 260.8Z" fill="#F6F6F1" fill-opacity="0.54" stroke="none" stroke-width="0"/><path d="M72.0 245.7L98.0 260.8L72.0 272.4L46.0 257.3Z" fill="#F6F6F1" fill-opacity="0.58" stroke="none" stroke-width="0"/><path d="M20.0 247.2L46.0 257.3L20.0 268.9L-6.0 259.1Z" fill="#F6F6F1" fill-opacity="0.58" stroke="none" stroke-width="0"/><path d="M-32.0 253.9L-6.0 259.1L-32.0 271.1L-58.0 266.4Z" fill="#F6F6F1" fill-opacity="0.55" stroke="none" stroke-width="0"/><path d="M514.0 303.5L540.0 321.0L514.0 336.0L488.0 318.1Z" fill="#EDEDE8" fill-opacity="0.23" stroke="none" stroke-width="0"/><path d="M462.0 300.3L488.0 318.1L462.0 332.7L436.0 314.5Z" fill="#EDEDE8" fill-opacity="0.25" stroke="none" stroke-width="0"/><path d="M410.0 296.5L436.0 314.5L410.0 328.7L384.0 310.3Z" fill="#EDEDE8" fill-opacity="0.28" stroke="none" stroke-width="0"/><path d="M358.0 292.2L384.0 310.3L358.0 324.2L332.0 305.7Z" fill="#EDEDE8" fill-opacity="0.32" stroke="none" stroke-width="0"/><path d="M306.0 287.4L332.0 305.7L306.0 319.2L280.0 300.5Z" fill="#EDEDE8" fill-opacity="0.35" stroke="none" stroke-width="0"/><path d="M254.0 281.7L280.0 300.5L254.0 313.7L228.0 294.5Z" fill="#EDEDE8" fill-opacity="0.40" stroke="none" stroke-width="0"/><path d="M202.0 275.0L228.0 294.5L202.0 307.2L176.0 287.3Z" fill="#EDEDE8" fill-opacity="0.45" stroke="none" stroke-width="0"/><path d="M150.0 267.5L176.0 287.3L150.0 299.6L124.0 279.4Z" fill="#EDEDE8" fill-opacity="0.50" stroke="none" stroke-width="0"/><path d="M98.0 260.8L124.0 279.4L98.0 291.3L72.0 272.4Z" fill="#EDEDE8" fill-opacity="0.56" stroke="none" stroke-width="0"/><path d="M46.0 257.3L72.0 272.4L46.0 284.0L20.0 268.9Z" fill="#EDEDE8" fill-opacity="0.60" stroke="none" stroke-width="0"/><path d="M-6.0 259.1L20.0 268.9L-6.0 280.5L-32.0 271.1Z" fill="#EDEDE8" fill-opacity="0.61" stroke="none" stroke-width="0"/><path d="M488.0 318.1L514.0 336.0L488.0 351.0L462.0 332.7Z" fill="#F6F6F1" fill-opacity="0.23" stroke="none" stroke-width="0"/><path d="M436.0 314.5L462.0 332.7L436.0 347.3L410.0 328.7Z" fill="#F6F6F1" fill-opacity="0.26" stroke="none" stroke-width="0"/><path d="M384.0 310.3L410.0 328.7L384.0 342.9L358.0 324.2Z" fill="#F6F6F1" fill-opacity="0.29" stroke="none" stroke-width="0"/><path d="M332.0 305.7L358.0 324.2L332.0 338.2L306.0 319.2Z" fill="#F6F6F1" fill-opacity="0.33" stroke="none" stroke-width="0"/><path d="M280.0 300.5L306.0 319.2L280.0 333.1L254.0 313.7Z" fill="#F6F6F1" fill-opacity="0.37" stroke="none" stroke-width="0"/><path d="M228.0 294.5L254.0 313.7L228.0 327.0L202.0 307.2Z" fill="#F6F6F1" fill-opacity="0.41" stroke="none" stroke-width="0"/><path d="M176.0 287.3L202.0 307.2L176.0 320.0L150.0 299.6Z" fill="#F6F6F1" fill-opacity="0.47" stroke="none" stroke-width="0"/><path d="M124.0 279.4L150.0 299.6L124.0 312.0L98.0 291.3Z" fill="#F6F6F1" fill-opacity="0.53" stroke="none" stroke-width="0"/><path d="M72.0 272.4L98.0 291.3L72.0 303.2L46.0 284.0Z" fill="#F6F6F1" fill-opacity="0.59" stroke="none" stroke-width="0"/><path d="M20.0 268.9L46.0 284.0L20.0 295.7L-6.0 280.5Z" fill="#F6F6F1" fill-opacity="0.63" stroke="none" stroke-width="0"/><path d="M462.0 332.7L488.0 351.0L462.0 366.0L436.0 347.3Z" fill="#EDEDE8" fill-opacity="0.23" stroke="none" stroke-width="0"/><path d="M410.0 328.7L436.0 347.3L410.0 361.9L384.0 342.9Z" fill="#EDEDE8" fill-opacity="0.26" stroke="none" stroke-width="0"/><path d="M358.0 324.2L384.0 342.9L358.0 357.5L332.0 338.2Z" fill="#EDEDE8" fill-opacity="0.30" stroke="none" stroke-width="0"/><path d="M306.0 319.2L332.0 338.2L306.0 353.1L280.0 333.1Z" fill="#EDEDE8" fill-opacity="0.33" stroke="none" stroke-width="0"/><path d="M254.0 313.7L280.0 333.1L254.0 347.6L228.0 327.0Z" fill="#EDEDE8" fill-opacity="0.38" stroke="none" stroke-width="0"/><path d="M202.0 307.2L228.0 327.0L202.0 340.4L176.0 320.0Z" fill="#EDEDE8" fill-opacity="0.43" stroke="none" stroke-width="0"/><path d="M150.0 299.6L176.0 320.0L150.0 332.7L124.0 312.0Z" fill="#EDEDE8" fill-opacity="0.48" stroke="none" stroke-width="0"/><path d="M98.0 291.3L124.0 312.0L98.0 324.3L72.0 303.2Z" fill="#EDEDE8" fill-opacity="0.55" stroke="none" stroke-width="0"/><path d="M46.0 284.0L72.0 303.2L46.0 315.2L20.0 295.7Z" fill="#EDEDE8" fill-opacity="0.61" stroke="none" stroke-width="0"/><path d="M436.0 347.3L462.0 366.0L436.0 381.0L410.0 361.9Z" fill="#F6F6F1" fill-opacity="0.23" stroke="none" stroke-width="0"/><path d="M384.0 342.9L410.0 361.9L384.0 376.7L358.0 357.5Z" fill="#F6F6F1" fill-opacity="0.27" stroke="none" stroke-width="0"/><path d="M332.0 338.2L358.0 357.5L332.0 373.1L306.0 353.1Z" fill="#F6F6F1" fill-opacity="0.30" stroke="none" stroke-width="0"/><path d="M280.0 333.1L306.0 353.1L280.0 369.8L254.0 347.6Z" fill="#F6F6F1" fill-opacity="0.33" stroke="none" stroke-width="0"/><path d="M228.0 327.0L254.0 347.6L228.0 362.9L202.0 340.4Z" fill="#F6F6F1" fill-opacity="0.38" stroke="none" stroke-width="0"/><path d="M176.0 320.0L202.0 340.4L176.0 353.8L150.0 332.7Z" fill="#F6F6F1" fill-opacity="0.44" stroke="none" stroke-width="0"/><path d="M124.0 312.0L150.0 332.7L124.0 345.5L98.0 324.3Z" fill="#F6F6F1" fill-opacity="0.50" stroke="none" stroke-width="0"/><path d="M72.0 303.2L98.0 324.3L72.0 336.6L46.0 315.2Z" fill="#F6F6F1" fill-opacity="0.57" stroke="none" stroke-width="0"/><path d="M410.0 361.9L436.0 381.0L410.0 396.1L384.0 376.7Z" fill="#EDEDE8" fill-opacity="0.23" stroke="none" stroke-width="0"/><path d="M358.0 357.5L384.0 376.7L358.0 392.2L332.0 373.1Z" fill="#EDEDE8" fill-opacity="0.27" stroke="none" stroke-width="0"/><path d="M306.0 353.1L332.0 373.1L306.0 391.2L280.0 369.8Z" fill="#EDEDE8" fill-opacity="0.29" stroke="none" stroke-width="0"/><path d="M254.0 347.6L280.0 369.8L254.0 388.9L228.0 362.9Z" fill="#EDEDE8" fill-opacity="0.32" stroke="none" stroke-width="0"/><path d="M202.0 340.4L228.0 362.9L202.0 378.3L176.0 353.8Z" fill="#EDEDE8" fill-opacity="0.39" stroke="none" stroke-width="0"/><path d="M150.0 332.7L176.0 353.8L150.0 367.1L124.0 345.5Z" fill="#EDEDE8" fill-opacity="0.46" stroke="none" stroke-width="0"/><path d="M98.0 324.3L124.0 345.5L98.0 358.2L72.0 336.6Z" fill="#EDEDE8" fill-opacity="0.52" stroke="none" stroke-width="0"/><path d="M384.0 376.7L410.0 396.1L384.0 411.4L358.0 392.2Z" fill="#F6F6F1" fill-opacity="0.23" stroke="none" stroke-width="0"/><path d="M332.0 373.1L358.0 392.2L332.0 409.3L306.0 391.2Z" fill="#F6F6F1" fill-opacity="0.25" stroke="none" stroke-width="0"/><path d="M280.0 369.8L306.0 391.2L280.0 412.5L254.0 388.9Z" fill="#F6F6F1" fill-opacity="0.26" stroke="none" stroke-width="0"/><path d="M228.0 362.9L254.0 388.9L228.0 408.4L202.0 378.3Z" fill="#F6F6F1" fill-opacity="0.30" stroke="none" stroke-width="0"/><path d="M176.0 353.8L202.0 378.3L176.0 392.5L150.0 367.1Z" fill="#F6F6F1" fill-opacity="0.39" stroke="none" stroke-width="0"/><path d="M124.0 345.5L150.0 367.1L124.0 380.0L98.0 358.2Z" fill="#F6F6F1" fill-opacity="0.47" stroke="none" stroke-width="0"/><path d="M358.0 392.2L384.0 411.4L358.0 427.1L332.0 409.3Z" fill="#EDEDE8" fill-opacity="0.23" stroke="none" stroke-width="0"/><path d="M306.0 391.2L332.0 409.3L306.0 428.4L280.0 412.5Z" fill="#EDEDE8" fill-opacity="0.22" stroke="none" stroke-width="0"/><path d="M254.0 388.9L280.0 412.5L254.0 434.2L228.0 408.4Z" fill="#C4242C" fill-opacity="0.55" stroke="#C4242C" stroke-width="1.5"/><path d="M202.0 378.3L228.0 408.4L202.0 424.3L176.0 392.5Z" fill="#EDEDE8" fill-opacity="0.30" stroke="none" stroke-width="0"/><path d="M150.0 367.1L176.0 392.5L150.0 404.9L124.0 380.0Z" fill="#EDEDE8" fill-opacity="0.41" stroke="none" stroke-width="0"/><path d="M332.0 409.3L358.0 427.1L332.0 443.5L306.0 428.4Z" fill="#F6F6F1" fill-opacity="0.21" stroke="none" stroke-width="0"/><path d="M280.0 412.5L306.0 428.4L280.0 447.9L254.0 434.2Z" fill="#F6F6F1" fill-opacity="0.18" stroke="none" stroke-width="0"/><path d="M228.0 408.4L254.0 434.2L228.0 451.3L202.0 424.3Z" fill="#F6F6F1" fill-opacity="0.19" stroke="none" stroke-width="0"/><path d="M176.0 392.5L202.0 424.3L176.0 435.0L150.0 404.9Z" fill="#F6F6F1" fill-opacity="0.31" stroke="none" stroke-width="0"/><path d="M306.0 428.4L332.0 443.5L306.0 460.0L280.0 447.9Z" fill="#EDEDE8" fill-opacity="0.19" stroke="none" stroke-width="0"/><path d="M254.0 434.2L280.0 447.9L254.0 464.3L228.0 451.3Z" fill="#EDEDE8" fill-opacity="0.15" stroke="none" stroke-width="0"/><path d="M202.0 424.3L228.0 451.3L202.0 461.3L176.0 435.0Z" fill="#EDEDE8" fill-opacity="0.20" stroke="none" stroke-width="0"/><path d="M280.0 447.9L306.0 460.0L280.0 475.6L254.0 464.3Z" fill="#F6F6F1" fill-opacity="0.17" stroke="none" stroke-width="0"/><path d="M228.0 451.3L254.0 464.3L228.0 476.2L202.0 461.3Z" fill="#F6F6F1" fill-opacity="0.16" stroke="none" stroke-width="0"/><path d="M254.0 464.3L280.0 475.6L254.0 489.8L228.0 476.2Z" fill="#EDEDE8" fill-opacity="0.18" stroke="none" stroke-width="0"/><path d="M150.0 95.0L176.0 106.4L202.0 117.3L228.0 128.1L254.0 139.8L280.0 152.9L306.0 167.8L332.0 184.0L358.0 201.0L384.0 218.0L410.0 235.0L436.0 251.9L462.0 268.9L488.0 286.1L514.0 303.5L540.0 321.0M124.0 109.8L150.0 120.5L176.0 130.6L202.0 140.7L228.0 151.7L254.0 164.5L280.0 179.4L306.0 196.0L332.0 213.3L358.0 230.8L384.0 248.1L410.0 265.3L436.0 282.7L462.0 300.3L488.0 318.1L514.0 336.0M98.0 124.6L124.0 134.6L150.0 144.0L176.0 153.3L202.0 163.6L228.0 176.1L254.0 191.0L280.0 207.9L306.0 225.6L332.0 243.5L358.0 261.2L384.0 278.8L410.0 296.5L436.0 314.5L462.0 332.7L488.0 351.0M72.0 139.4L98.0 148.7L124.0 157.3L150.0 165.8L176.0 175.6L202.0 187.7L228.0 202.7L254.0 219.8L280.0 238.0L306.0 256.2L332.0 274.3L358.0 292.2L384.0 310.3L410.0 328.7L436.0 347.3L462.0 366.0M46.0 154.1L72.0 162.8L98.0 170.7L124.0 178.4L150.0 187.5L176.0 199.3L202.0 214.3L228.0 231.7L254.0 250.3L280.0 269.0L306.0 287.4L332.0 305.7L358.0 324.2L384.0 342.9L410.0 361.9L436.0 381.0M20.0 168.9L46.0 177.0L72.0 184.0L98.0 191.0L124.0 199.4L150.0 210.9L176.0 225.9L202.0 243.6L228.0 262.6L254.0 281.7L280.0 300.5L306.0 319.2L332.0 338.2L358.0 357.5L384.0 376.7L410.0 396.1M-6.0 183.7L20.0 191.1L46.0 197.4L72.0 203.6L98.0 211.4L124.0 222.5L150.0 237.5L176.0 255.6L202.0 275.0L228.0 294.5L254.0 313.7L280.0 333.1L306.0 353.1L332.0 373.1L358.0 392.2L384.0 411.4M-32.0 198.5L-6.0 205.2L20.0 210.7L46.0 216.1L72.0 223.3L98.0 234.1L124.0 249.2L150.0 267.5L176.0 287.3L202.0 307.2L228.0 327.0L254.0 347.6L280.0 369.8L306.0 391.2L332.0 409.3L358.0 427.1M-58.0 213.3L-32.0 219.3L-6.0 224.1L20.0 228.7L46.0 235.2L72.0 245.7L98.0 260.8L124.0 279.4L150.0 299.6L176.0 320.0L202.0 340.4L228.0 362.9L254.0 388.9L280.0 412.5L306.0 428.4L332.0 443.5M-84.0 228.1L-58.0 233.5L-32.0 237.4L-6.0 241.3L20.0 247.2L46.0 257.3L72.0 272.4L98.0 291.3L124.0 312.0L150.0 332.7L176.0 353.8L202.0 378.3L228.0 408.4L254.0 434.2L280.0 447.9L306.0 460.0M-110.0 242.9L-84.0 247.6L-58.0 250.8L-32.0 253.9L-6.0 259.1L20.0 268.9L46.0 284.0L72.0 303.2L98.0 324.3L124.0 345.5L150.0 367.1L176.0 392.5L202.0 424.3L228.0 451.3L254.0 464.3L280.0 475.6M-136.0 257.6L-110.0 261.7L-84.0 264.2L-58.0 266.4L-32.0 271.1L-6.0 280.5L20.0 295.7L46.0 315.2L72.0 336.6L98.0 358.2L124.0 380.0L150.0 404.9L176.0 435.0L202.0 461.3L228.0 476.2L254.0 489.8" fill="none" stroke="#0A0A0A" stroke-width="0.85" opacity="0.85"/><path d="M150.0 95.0L124.0 109.8L98.0 124.6L72.0 139.4L46.0 154.1L20.0 168.9L-6.0 183.7L-32.0 198.5L-58.0 213.3L-84.0 228.1L-110.0 242.9L-136.0 257.6M176.0 106.4L150.0 120.5L124.0 134.6L98.0 148.7L72.0 162.8L46.0 177.0L20.0 191.1L-6.0 205.2L-32.0 219.3L-58.0 233.5L-84.0 247.6L-110.0 261.7M202.0 117.3L176.0 130.6L150.0 144.0L124.0 157.3L98.0 170.7L72.0 184.0L46.0 197.4L20.0 210.7L-6.0 224.1L-32.0 237.4L-58.0 250.8L-84.0 264.2M228.0 128.1L202.0 140.7L176.0 153.3L150.0 165.8L124.0 178.4L98.0 191.0L72.0 203.6L46.0 216.1L20.0 228.7L-6.0 241.3L-32.0 253.9L-58.0 266.4M254.0 139.8L228.0 151.7L202.0 163.6L176.0 175.6L150.0 187.5L124.0 199.4L98.0 211.4L72.0 223.3L46.0 235.2L20.0 247.2L-6.0 259.1L-32.0 271.1M280.0 152.9L254.0 164.5L228.0 176.1L202.0 187.7L176.0 199.3L150.0 210.9L124.0 222.5L98.0 234.1L72.0 245.7L46.0 257.3L20.0 268.9L-6.0 280.5M306.0 167.8L280.0 179.4L254.0 191.0L228.0 202.7L202.0 214.3L176.0 225.9L150.0 237.5L124.0 249.2L98.0 260.8L72.0 272.4L46.0 284.0L20.0 295.7M332.0 184.0L306.0 196.0L280.0 207.9L254.0 219.8L228.0 231.7L202.0 243.6L176.0 255.6L150.0 267.5L124.0 279.4L98.0 291.3L72.0 303.2L46.0 315.2M358.0 201.0L332.0 213.3L306.0 225.6L280.0 238.0L254.0 250.3L228.0 262.6L202.0 275.0L176.0 287.3L150.0 299.6L124.0 312.0L98.0 324.3L72.0 336.6M384.0 218.0L358.0 230.8L332.0 243.5L306.0 256.2L280.0 269.0L254.0 281.7L228.0 294.5L202.0 307.2L176.0 320.0L150.0 332.7L124.0 345.5L98.0 358.2M410.0 235.0L384.0 248.1L358.0 261.2L332.0 274.3L306.0 287.4L280.0 300.5L254.0 313.7L228.0 327.0L202.0 340.4L176.0 353.8L150.0 367.1L124.0 380.0M436.0 251.9L410.0 265.3L384.0 278.8L358.0 292.2L332.0 305.7L306.0 319.2L280.0 333.1L254.0 347.6L228.0 362.9L202.0 378.3L176.0 392.5L150.0 404.9M462.0 268.9L436.0 282.7L410.0 296.5L384.0 310.3L358.0 324.2L332.0 338.2L306.0 353.1L280.0 369.8L254.0 388.9L228.0 408.4L202.0 424.3L176.0 435.0M488.0 286.1L462.0 300.3L436.0 314.5L410.0 328.7L384.0 342.9L358.0 357.5L332.0 373.1L306.0 391.2L280.0 412.5L254.0 434.2L228.0 451.3L202.0 461.3M514.0 303.5L488.0 318.1L462.0 332.7L436.0 347.3L410.0 361.9L384.0 376.7L358.0 392.2L332.0 409.3L306.0 428.4L280.0 447.9L254.0 464.3L228.0 476.2M540.0 321.0L514.0 336.0L488.0 351.0L462.0 366.0L436.0 381.0L410.0 396.1L384.0 411.4L358.0 427.1L332.0 443.5L306.0 460.0L280.0 475.6L254.0 489.8" fill="none" stroke="#0A0A0A" stroke-width="0.85" opacity="0.55"/><circle cx="254.0" cy="388.9" r="3.4" fill="#C4242C"/></svg></div>
+      <svg class="stamp" viewBox="0 0 260 150" role="img" aria-label="Case stamp: examined, every byte, every reader">
+    <rect x="1" y="1" width="258" height="148" fill="none" stroke="#DCDCD6"/>
+    <g transform="rotate(-7 130 84)" opacity="0.94">
+      <rect x="18" y="52" width="224" height="62" fill="none" stroke="#C4242C" stroke-width="3"/>
+      <rect x="24" y="58" width="212" height="50" fill="none" stroke="#C4242C" stroke-width="1"/>
+      <text x="130" y="80" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace" font-size="15" letter-spacing="2.6" fill="#C4242C" font-weight="700">EXAMINED</text>
+      <text x="130" y="98" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace" font-size="8.5" letter-spacing="3" fill="#C4242C">EVERY BYTE &#183; EVERY READER</text>
+    </g>
+    <text x="130" y="24" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace" font-size="8" letter-spacing="2.4" fill="#3A3A3A">CASE FILE &#183; SIM4LKE</text>
+    <text x="130" y="136" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace" font-size="7.5" letter-spacing="2" fill="#6C6C6C">NOT A DYNO OPINION</text>
+  </svg>
+    </aside>
+  </div>
+</div>
+
+<div class="scopebar">
+  <div class="wrap in">
+    <span><b>scope</b> SIM4LKE ECU</span><span><b>you send</b> tune &#183; stock ROM &#183; read off the car</span>
+    <span><b>evidence</b> byte level, traced to code</span><span><b>first two</b> free</span>
+  </div>
+</div>
+
+<section id="outcomes" class="wrap">
+  <div class="lab"><span class="n">01</span><h2>Placebo, worse, or a bill you have not received yet</h2><span class="t"></span></div>
+  <div class="three">
+    <article>
+      <div class="k">01 &#183; Placebo</div>
+      <h3>Nothing was read</h3>
+      <p>Tables edited, exported, flashed &#8212; and never read by the firmware. The car is exactly what it
+        was. It still feels sharper, because you paid.</p>
+      <svg viewBox="0 0 240 60" role="img" aria-label="Flat line, no change">
+        <line x1="0" y1="59" x2="240" y2="59" stroke="#DCDCD6"/>
+        <path d="M2 36h236" stroke="#9A9A9A" stroke-width="1.6" stroke-dasharray="5 5"/>
+        <text x="2" y="16" font-family="Cascadia Mono,monospace" font-size="8" fill="#9A9A9A" letter-spacing="1.6">NO CHANGE</text>
+      </svg>
+    </article>
+    <article>
+      <div class="k">02 &#183; Worse</div>
+      <h3>The engine fights it</h3>
+      <p>Throttle flattened, a limiter lifted that should have stayed, timing pushed where knock control now
+        corrects constantly. Nothing on the dash explains it.</p>
+      <svg viewBox="0 0 240 60" role="img" aria-label="Line falling">
+        <line x1="0" y1="59" x2="240" y2="59" stroke="#DCDCD6"/>
+        <path d="M2 16h52l26-4h48l110 42" stroke="#0A0A0A" stroke-width="1.8" fill="none"/>
+        <path d="M128 12L238 54" stroke="#C4242C" stroke-width="1.8"/>
+      </svg>
+    </article>
+    <article>
+      <div class="k" style="color:#0A0A0A">03 &#183; Dues later</div>
+      <h3>It pulls &#8212; until it does not</h3>
+      <p>Lean under load, or advance it was never built for. Feels like the best money you spent. The bill
+        arrives at full throttle, in fourth gear.</p>
+      <svg viewBox="0 0 240 60" role="img" aria-label="Line rising then dropping sharply">
+        <line x1="0" y1="59" x2="240" y2="59" stroke="#DCDCD6"/>
+        <path d="M2 48h38l28-12h44l26-10" stroke="#0A0A0A" stroke-width="1.8" fill="none"/>
+        <path d="M138 26h28l72 32" stroke="#C4242C" stroke-width="2" fill="none"/>
+        <rect x="134" y="22" width="8" height="8" fill="#C4242C"/>
+      </svg>
+    </article>
+  </div>
+</section>
+
+<section id="checks" class="wrap">
+  <div class="lab"><span class="n">02</span><h2>Read like the ECU reads it</h2><span class="t"></span></div>
+  <p class="lede" style="margin-bottom:26px">Table by table, against the firmware that uses it. No generic map
+    pack, no guessing from the name of a grid.</p>
+  <div class="checklist">
+    <div class="row"><span class="i">01</span><span class="q">Is this table read at all?</span><span class="a">Whether the change you paid for does anything, or was never read by the firmware.</span></div>
+    <div class="row"><span class="i">02</span><span class="q">Is the value inside the band?</span><span class="a">How far a cell sits from stock &#8212; and whether this engine tolerates that at 6,000 rpm.</span></div>
+    <div class="row"><span class="i">03</span><span class="q">Is protection still armed?</span><span class="a">Derate, torque limits, overspeed and limp paths: on, softened, or gone.</span></div>
+    <div class="row"><span class="i">04</span><span class="q">What is actually limiting it?</span><span class="a">The scalar or grid that caps the car before any tuning table does.</span></div>
+    <div class="row"><span class="i">05</span><span class="q">Is lambda safe under load?</span><span class="a">Target versus what the fuel side can deliver where the engine works hardest.</span></div>
+    <div class="row"><span class="i">06</span><span class="q">Is the timing defensible?</span><span class="a">Advance against the knock margin, cell by cell, not just at peak.</span></div>
+    <div class="row"><span class="i">07</span><span class="q">What changed against stock?</span><span class="a">Every byte that moved &#8212; and the ones that should have and did not.</span></div>
+    <div class="row"><span class="i">08</span><span class="q">Is this read complete?</span><span class="a">Whether it is whole and clean, or should never be written back to an ECU.</span></div>
+  </div>
+  <div class="stack3d"><svg viewBox="0 0 300 250" role="img" aria-label="Three stacked calibration file slabs drawn isometrically"><polygon points="86,150 108,137.9 246,137.9 224,150" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.1"/><polygon points="224,150 246,137.9 246,211.9 224,224" fill="#EFEFE8" stroke="#0A0A0A" stroke-width="1.1"/><polygon points="86,150 224,150 224,224 86,224" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="1.3"/><polygon points="70,134 92,121.9 230,121.9 208,134" fill="#FAFAF6" stroke="#0A0A0A" stroke-width="1.1"/><polygon points="208,134 230,121.9 230,195.9 208,208" fill="#EFEFE8" stroke="#0A0A0A" stroke-width="1.1"/><polygon points="70,134 208,134 208,208 70,208" fill="#FAFAF6" stroke="#0A0A0A" stroke-width="1.3"/><polygon points="54,118 76,105.9 214,105.9 192,118" fill="#F4F4EE" stroke="#0A0A0A" stroke-width="1.1"/><polygon points="192,118 214,105.9 214,179.9 192,192" fill="#EFEFE8" stroke="#0A0A0A" stroke-width="1.1"/><polygon points="54,118 192,118 192,192 54,192" fill="#F4F4EE" stroke="#0A0A0A" stroke-width="1.3"/><path d="M68 140h72M68 154h48M68 168h60" stroke="#C4242C" stroke-width="1.4"/><text x="68" y="186" font-family="Cascadia Mono,Consolas,monospace" font-size="7" letter-spacing="1.6" fill="#8C8C86">TUNE / STOCK / READ</text></svg>
+    <div><div class="cap">03 &#183; what arrives</div>
+      <p>One file per submission. A tune, a stock ROM, or a read straight off the car &#8212; each lands on the
+        bench with its own verdict, not a generic answer.</p></div>
+  </div>
+</section>
+
+<div class="offer" id="contact">
+  <div class="wrap in">
+    <div>
+      <div class="mono" style="color:#C4242C">04 &#183; offer</div>
+      <h2 style="margin-top:14px">First two files free. Then decide whether we are worth it.</h2>
+      <p>You already own the answer. It is in the file on your laptop, and it has been running your engine
+        this whole time.</p>
+      <div class="scope2">
+        <b>SIEMENS SIM4LKE ECU ONLY</b><br>
+        C180K &#183; C200K &#183; C230K KOMPRESSOR<br>
+        W203 &#183; CL203 &#183; S203 &#183; C209 &#183; A209 &#183; R171<br>
+        SIM4LSE / SIM4LE &#8212; WE DO NOT INVENT ANSWERS<br>
+        YOUR FILE STAYS PRIVATE
+      </div>
     </div>
+    <a class="btn" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20" style="justify-content:center">Send your file <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11M7 2l5 5-5 5" stroke="currentColor" stroke-width="2"/></svg></a>
   </div>
-</section>
+</div>
 
-<section>
-  <div class="wrap">
-    <span class="eyebrow">What files hide</span>
-    <h2>Four things your file will never tell you</h2>
-    <p class="lead">
-      A file can look busy and change nothing. It can look untouched and cap everything the engine
-      has. Neither is visible without reading the bytes.
-    </p>
-    <div class="grid two">
-      <div class="card"><h3>A table that does nothing</h3>
-        <p>Edited, exported, flashed &mdash; never read by the firmware. The car drives exactly as
-        before. You paid for a change that does not exist.</p></div>
-      <div class="card"><h3>The table nobody touched</h3>
-        <p>Everything around it was raised, but the one limit in the middle is still stock, so the
-        extra never arrives. The file does not admit it.</p></div>
-      <div class="card"><h3>Values past the safe band</h3>
-        <p>The grid accepts the number. That is not the same as the engine accepting it at 6,000
-        rpm in fourth gear.</p></div>
-      <div class="card"><h3>A scalar that decides everything</h3>
-        <p>One value, sitting alone, is what actually limits the car. Miss it and every table that
-        was edited is decoration.</p></div>
-    </div>
-  </div>
-</section>
-
-<section id="checks">
-  <div class="wrap">
-    <span class="eyebrow">What we check</span>
-    <h2>Read like the ECU reads it</h2>
-    <p class="lead">
-      Table by table, against the firmware that uses it. No generic map pack, no guessing from the
-      name of a grid.
-    </p>
-    <div class="tscroll">
-    <table class="evidence">
-      <thead><tr><th>Check</th><th>What it answers</th></tr></thead>
-      <tbody>
-        <tr><td>Is this table read at all?</td><td>Whether the change you paid for does anything.</td></tr>
-        <tr><td>Is the value inside the band?</td><td>How far a cell sits from stock, and whether this engine tolerates that.</td></tr>
-        <tr><td>Is protection still armed?</td><td>Derate, torque limits, overspeed and limp paths: on, softened, or gone.</td></tr>
-        <tr><td>What is actually limiting it?</td><td>The scalar or grid that caps the car before any tuning table does.</td></tr>
-        <tr><td>Is lambda safe under load?</td><td>Target versus what the fuel side can deliver where the engine works hardest.</td></tr>
-        <tr><td>Is the timing defensible?</td><td>Advance against the knock margin, cell by cell, not just at peak.</td></tr>
-        <tr><td>What changed against stock?</td><td>Every byte that moved, and the ones that should have and did not.</td></tr>
-        <tr><td>Is this read complete?</td><td>Whether it is whole and clean, or should never be written back to an ECU.</td></tr>
-      </tbody>
-    </table>
-    </div>
-  </div>
-</section>
-
-<section id="method">
-  <div class="wrap">
-    <span class="eyebrow">How we know</span>
-    <h2>We do not guess. We read the code.</h2>
-    <p class="lead">
-      Every claim is grounded in the firmware running your SIM4LKE ECU, read with our own analysis
-      tooling built for this calibration &mdash; not borrowed from a generic pack and never inferred
-      from a table name.
-    </p>
-    <div class="grid">
-      <div class="card"><span class="num">01</span><h3>Firmware-grounded</h3>
-        <p>Every table traced to the instruction that reads it. If nothing in the code reads a
-        table, you are told it does nothing &mdash; not handed a pretty grid and left to
-        assume.</p></div>
-      <div class="card"><span class="num">02</span><h3>Byte-level against stock</h3>
-        <p>Every changed byte, its address, and what sat there on a clean read. No summaries that
-        blur "tuned" into "re-saved".</p></div>
-      <div class="card"><span class="num">03</span><h3>Protection paths traced</h3>
-        <p>Derate, torque limit, overspeed and limp logic followed through the code that enforces
-        them &mdash; because that is where a file quietly disarms a car.</p></div>
-    </div>
-    <p class="subnote" style="margin-top:36px">
-      A calibration audit, not a dyno opinion: what the file instructs the ECU to do, and the
-      evidence for every line of it.
-    </p>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <span class="eyebrow" style="color:var(--muted-dark)">The offer</span>
-    <p class="bigline">First two files free. Then decide whether we are worth it.</p>
-    <p class="lede">
-      You already own the answer. It is sitting in the file on your laptop, and it has been running
-      your engine this whole time.
-    </p>
-    <a class="btn light" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send your first file</a>
-    <p class="subnote" style="margin-top:18px">huyezarc@gmail.com &middot; SIM4LKE ECU only &middot; your file stays private</p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <span class="eyebrow">Scope</span>
-    <h2>One ECU. We are not shy about saying no.</h2>
-    <p class="lead">
-      The Siemens SIM4LKE ECU: C180K, C200K and C230K Kompressor in the Mercedes W203, CL203, S203,
-      C209, A209 and R171. If your file is not from one of those, it is a different engine
-      management system with a different layout, and we will say so instead of inventing an answer.
-    </p>
-    <div class="callout">
-      <p><strong>What a file cannot tell you.</strong> It cannot tell you the condition of your
-      pistons, your fuel pump or your intercooler. Anyone who promises "safe" without seeing the
-      engine is guessing. What we can tell you is exactly what your ECU is being asked to do
-      &mdash; and that is the part nobody has ever checked.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <span>SIM4LKE ECU Calibration &middot; verification, bytes to code</span>
-    <span><a href="mailto:huyezarc@gmail.com">huyezarc@gmail.com</a> &middot; <a href="contact.html">Contact</a></span>
-  </div>
+<footer class="wrap">
+  <span>SIM4LKE ECU Calibration &#183; verification, bytes to code</span>
+  <span><a href="mailto:huyezarc@gmail.com">huyezarc@gmail.com</a></span>
 </footer>
-
 </body>
 </html>

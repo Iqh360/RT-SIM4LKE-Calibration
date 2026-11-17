@@ -9,105 +9,121 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<div class="paperstack" aria-hidden="true"><i></i><i></i><i></i></div>
 
-<header class="site">
-  <div class="wrap">
+<header>
+  <div class="wrap bar">
     <a class="brand" href="index.html"><span class="mark">RT</span> SIM4LKE ECU Calibration</a>
-    <nav class="main">
-      <a href="index.html#placebo">Placebo or worse</a>
-      <a href="index.html#checks">What we check</a>
-      <a href="index.html#method">How we know</a>
-      <a href="contact.html" class="on">Contact</a>
-      <a class="btn cta-sm" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send your file</a>
-    </nav>
+    <div class="mono">one address &#183; attach the file</div>
+    <nav><a href="index.html#outcomes">Outcomes</a><a href="index.html#checks">Checks</a><a href="#send">Contact</a></nav>
   </div>
 </header>
 
-<section class="hero" style="padding-bottom:64px">
-  <div class="wrap">
-    <span class="kicker">Contact &middot; SIM4LKE ECU only</span>
-    <h1 style="font-size:clamp(2rem,4vw,3rem);max-width:26ch">One address. Attach the file. That is the whole process.</h1>
-    <p class="lede">
-      No portal, no ticket queue, no form that swallows your message. Your first two files are
-      free, and the answer comes with the reasoning attached.
-    </p>
-    <p><a class="mailbox" href="mailto:huyezarc@gmail.com">huyezarc@gmail.com</a></p>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <span class="eyebrow">What you can send</span>
-    <h2>Anything that came out of the ECU</h2>
-    <div class="grid two">
-      <div class="card"><h3>A tune</h3>
-        <p>The file the car has been running. The most useful thing you can send, because it is the
-        one that has been asking the engine to do something.</p></div>
-      <div class="card"><h3>A stock ROM</h3>
-        <p>A clean read from the same ECU. Worth having as a reference before anything is written
-        back.</p></div>
-      <div class="card"><h3>A read off the car</h3>
-        <p>Fresh and unedited. Useful when you are about to start work, or when something does not
-        feel right and you want to know why.</p></div>
-      <div class="card"><h3>A file someone sold you</h3>
-        <p>No explanation given. Send it and find out what is actually inside before it goes near
-        the car.</p></div>
+<div class="wrap">
+  <div class="hero" id="send">
+    <div>
+      <div class="mono" style="color:var(--accent)">Contact &#183; SIM4LKE ECU only</div>
+      <h1>One address.<br><span class="cut">Attach the file.</span><br>That is the whole process.</h1>
+      <p class="lede">No portal, no ticket queue, no form that swallows your message. Your first two files are
+        free, and the answer comes with the reasoning attached.</p>
+      <div class="cta">
+        <a class="btn" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">huyezarc@gmail.com <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11M7 2l5 5-5 5" stroke="currentColor" stroke-width="2"/></svg></a>
+        <span class="free">First two files <b>free</b></span>
+      </div>
     </div>
+    <aside class="side">
+      <div class="row"><span class="mono">Send</span><span>1 file</span></div>
+      <div class="row"><span class="mono">Plus</span><span>one line</span></div>
+      <div class="row"><span class="mono">No</span><span>account</span></div>
+      <div class="row"><span class="mono">First two</span><span>Free</span></div>
+      <svg class="stamp" viewBox="0 0 260 150" role="img" aria-label="Case stamp: examined, every byte, every reader">
+    <rect x="1" y="1" width="258" height="148" fill="none" stroke="#DCDCD6"/>
+    <g transform="rotate(-7 130 84)" opacity="0.94">
+      <rect x="18" y="52" width="224" height="62" fill="none" stroke="#C4242C" stroke-width="3"/>
+      <rect x="24" y="58" width="212" height="50" fill="none" stroke="#C4242C" stroke-width="1"/>
+      <text x="130" y="80" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace" font-size="15" letter-spacing="2.6" fill="#C4242C" font-weight="700">EXAMINED</text>
+      <text x="130" y="98" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace" font-size="8.5" letter-spacing="3" fill="#C4242C">EVERY BYTE &#183; EVERY READER</text>
+    </g>
+    <text x="130" y="24" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace" font-size="8" letter-spacing="2.4" fill="#3A3A3A">CASE FILE &#183; SIM4LKE</text>
+    <text x="130" y="136" text-anchor="middle" font-family="Cascadia Mono,Consolas,monospace" font-size="7.5" letter-spacing="2" fill="#6C6C6C">NOT A DYNO OPINION</text>
+  </svg>
+    </aside>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="lab"><span class="n">01</span><h2>Anything that came out of the ECU</h2><span class="t"></span></div>
+  <div class="sendgrid">
+    <article>
+      <h3>A tune</h3>
+      <p>The file the car has been running. The most useful thing you can send, because it is the one that has
+        been asking the engine to do something.</p>
+    </article>
+    <article>
+      <h3>A stock ROM</h3>
+      <p>A clean read from the same ECU. Worth having as a reference before anything is written back.</p>
+    </article>
+    <article>
+      <h3>A read off the car</h3>
+      <p>Fresh and unedited. Useful when you are about to start work, or when something does not feel right
+        and you want to know why.</p>
+    </article>
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <span class="eyebrow">How to send it</span>
-    <h2>Three things, and only one of them matters</h2>
-    <dl class="kv">
-      <dt>The file</dt><dd>Zip the calibration and attach it. That single file answers most
-        questions before they are asked.</dd>
-      <dt>One line</dt><dd>What the car does now, or what you want to know. Plain words beat a
-        technical report.</dd>
-      <dt>Optional</dt><dd>Your read or flash tool, and any log you have. Only matters if you are
-        about to write to the ECU.</dd>
-    </dl>
-    <div class="callout" style="margin-top:44px">
-      <p><strong>You do not need to know any of the technical detail.</strong> No part numbers, no
-      addresses, no table names. Send the file and ask the question. Working out what the numbers
-      mean is our job, and it is the only thing we do.</p>
+<section class="wrap">
+  <div class="lab"><span class="n">02</span><h2>How to send it</h2><span class="t"></span></div>
+  <div class="steps">
+    <div class="s"><div class="k">01</div><h3>The file</h3><p>Zip the calibration and attach it. That single
+      file answers most questions before they are asked.</p></div>
+    <div class="s"><div class="k">02</div><h3>One line</h3><p>What the car does now, or what you want to know.
+      Plain words beat a technical report.</p></div>
+    <div class="s"><div class="k">03</div><h3>Optional</h3><p>Your read or flash tool, and any log you have.
+      Only matters if you are about to write to the ECU.</p></div>
+  </div>
+  <p class="lede" style="margin-top:28px;max-width:66ch">You do not need to know any of the technical detail.
+    No part numbers, no addresses, no table names. Send the file and ask the question. Working out what the
+    numbers mean is our job.</p>
+</section>
+
+<section class="wrap">
+  <div class="lab"><span class="n">03</span><h2>SIM4LKE ECU or nothing</h2><span class="t"></span></div>
+  <div class="checklist">
+    <div class="row"><span class="i">01</span><span class="q">In scope</span><span class="a">The Siemens
+      SIM4LKE ECU: C180K, C200K and C230K Kompressor in the Mercedes W203, CL203, S203, C209, A209 and R171.</span></div>
+    <div class="row"><span class="i">02</span><span class="q">Out of scope</span><span class="a">SIM4LSE and
+      SIM4LE are different ECUs with different layouts. No answer will be invented for them, and anything that
+      is not a 1 MiB SIM4LKE read is identified as such.</span></div>
+    <div class="row"><span class="i">03</span><span class="q">Never</span><span class="a">No remote connection
+      to your car, no flashing on your behalf, and no promise that a file is safe for an engine nobody has
+      looked at.</span></div>
+    <div class="row"><span class="i">04</span><span class="q">Always</span><span class="a">Your file, your logs
+      and your details stay with us. Nothing is shared, and nothing is published.</span></div>
+  </div>
+</section>
+
+<div class="offer" id="contact">
+  <div class="wrap in">
+    <div>
+      <div class="mono" style="color:#C4242C">04 &#183; offer</div>
+      <h2 style="margin-top:14px">First two files free. Then decide whether we are worth it.</h2>
+      <p>You already own the answer. It is in the file on your laptop, and it has been running your engine
+        this whole time.</p>
+      <div class="scope2">
+        <b>SIEMENS SIM4LKE ECU ONLY</b><br>
+        C180K &#183; C200K &#183; C230K KOMPRESSOR<br>
+        W203 &#183; CL203 &#183; S203 &#183; C209 &#183; A209 &#183; R171<br>
+        SIM4LSE / SIM4LE &#8212; WE DO NOT INVENT ANSWERS<br>
+        YOUR FILE STAYS PRIVATE
+      </div>
     </div>
+    <a class="btn" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20" style="justify-content:center">Send your file <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11M7 2l5 5-5 5" stroke="currentColor" stroke-width="2"/></svg></a>
   </div>
-</section>
+</div>
 
-<section>
-  <div class="wrap">
-    <span class="eyebrow">Scope</span>
-    <h2>SIM4LKE ECU or nothing</h2>
-    <p class="lead">
-      The Siemens SIM4LKE ECU only: C180K, C200K and C230K Kompressor in the Mercedes W203, CL203,
-      S203, C209, A209 and R171.
-    </p>
-    <ul class="plain">
-      <li>SIM4LSE and SIM4LE are different ECUs with different layouts. No answer will be invented
-        for them.</li>
-      <li>Anything that is not a 1&nbsp;MiB SIM4LKE read is identified as such, not guessed at.</li>
-      <li>No remote connection to your car, and no flashing on your behalf. Ever.</li>
-      <li>No promise that a file is safe for an engine nobody has looked at.</li>
-      <li>No sharing your file, your logs or your details with anyone else.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <p class="bigline">Two files. On the house. Then you judge.</p>
-    <a class="btn light" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send your first file</a>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap">
-    <span>SIM4LKE ECU Calibration &middot; verification, bytes to code</span>
-    <span><a href="mailto:huyezarc@gmail.com">huyezarc@gmail.com</a> &middot; <a href="index.html">Overview</a></span>
-  </div>
+<footer class="wrap">
+  <span>SIM4LKE ECU Calibration &#183; verification, bytes to code</span>
+  <span><a href="mailto:huyezarc@gmail.com">huyezarc@gmail.com</a></span>
 </footer>
-
 </body>
 </html>
