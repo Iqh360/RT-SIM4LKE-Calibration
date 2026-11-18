@@ -51,7 +51,7 @@ h2{font-size:clamp(28px,3.6vw,50px);line-height:1.02;letter-spacing:-.04em;margi
 .three svg{display:block;width:100%;height:64px;margin-top:auto;padding-top:18px}
 
 /* checklist rows */
-.checklist{border-top:2px solid var(--ink)}
+.checklist{border-top:2px solid var(--ink);container-type:inline-size}
 .checklist .row{display:grid;grid-template-columns:46px 1fr 1.1fr;gap:24px;padding:17px 0;
   border-bottom:1px solid var(--rule);align-items:start}
 .checklist .row:hover{background:var(--tint)}
@@ -89,6 +89,11 @@ h2{font-size:clamp(28px,3.6vw,50px);line-height:1.02;letter-spacing:-.04em;margi
 .scope2{margin-top:26px;font-family:var(--mono);font-size:10px;line-height:2;letter-spacing:.16em;
   text-transform:uppercase;color:#8F8F8F}
 .scope2 b{color:#fff;font-weight:400}
+@container (max-width:560px){
+  .checklist .row{grid-template-columns:30px 1fr;gap:12px}
+  .checklist .a{grid-column:2}
+}
+
 footer{padding:26px 0 44px;display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;
   background:var(--ink);color:#8F8F8F;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
 footer a{color:#fff}
@@ -97,8 +102,6 @@ footer a{color:#fff}
   .three{grid-template-columns:1fr}
   .three article{border-right:0;border-bottom:1px solid var(--rule)}
   .three article:last-child{border-bottom:0}
-  .checklist .row{grid-template-columns:30px 1fr;gap:12px}
-  .checklist .a{grid-column:2}
   .stack3d{grid-template-columns:1fr;gap:18px}
   .sendgrid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr;gap:18px}
@@ -282,6 +285,7 @@ body{background:var(--white)}
 .pin .step p{color:#A9AEAE;margin:0;font-size:16px}
 .pin .step .cta{margin-top:14px}
 .pin .sticky > *{min-width:0}
+@supports (height:100dvh){.pin .sticky{min-height:100dvh}}
 @media(max-width:640px){.scoperow{grid-template-columns:1fr 1fr}}
 @media(max-width:380px){
   .scoperow{grid-template-columns:1fr}
@@ -296,6 +300,7 @@ body{background:var(--white)}
 .hdnav a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
 .hdbrand{display:inline-flex;align-items:center;min-height:44px}
 /* ── responsive package (validated in responsive.preview.html) ── */
+@supports (height:100dvh){.pin .sticky{min-height:100dvh}}
 @media(max-width:640px){.scoperow{grid-template-columns:1fr 1fr}}
 @media(max-width:380px){
   .scoperow{grid-template-columns:1fr}
