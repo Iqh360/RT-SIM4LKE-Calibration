@@ -9,55 +9,56 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<div class="prog" aria-hidden="true"></div>
 <header class="hero-dark">
   <div class="wrap hdbar">
     <a class="hdbrand" href="index.html"><span class="mark">RT</span> SIM4LKE ECU Calibration</a>
     <nav class="hdnav" aria-label="Sections"><a href="#outcomes">Outcomes</a><a href="#checks">Checks</a><a href="contact.html">Contact</a></nav>
     <span class="live"><i></i>dossier open &#183; bench live</span>
   </div>
+</header>
 
-  <div class="wrap heroin">
-    <div>
-      <div class="mono" style="color:var(--accent)">Siemens SIM4LKE ECU &#183; Mercedes &#183; C167 &#183; 29F800 &#183; 1 MiB</div>
-      <h1>You paid<br>for a tune.<br><span class="cut">The car feels</span><br><span class="cut">no different.</span></h1>
-      <p class="lede">Sometimes nothing changed at all. Sometimes the wrong table was touched and the car got
-        worse. Occasionally it did something the engine will pay for later. All three feel identical from the
-        driver's seat &#8212; the file is the only thing that tells them apart.</p>
-      <div class="cta">
-        <a class="btn" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send your first file <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11M7 2l5 5-5 5" stroke="currentColor" stroke-width="2"/></svg></a>
-        <a class="btn line" href="#checks">What we check</a>
-        <span class="free">First two files <b>free</b></span>
+<div class="pin" id="pin">
+  <div class="sticky">
+    <div class="visual" aria-hidden="true">
+      <div class="scene" id="scene">
+        <div class="face f-top"></div><div class="face f-bottom"></div>
+        <div class="face f-left"></div><div class="face f-right"></div>
+        <div class="face f-front"><div class="fins"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="face f-back"></div>
+        <div class="deckface">
+          <div>SIEMENS <b>SIM4LKE</b><br>5WK9 &#183; 2711539879<br>M271 KOMPRESSOR</div>
+          <div class="pins"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        </div>
+        <div class="conn"><i></i><i></i></div>
+      </div>
+      <div class="chipcard"><div><b>29F800</b><span>1 MiB &#183; PSOP-44</span></div></div>
+      <div class="stamp2"><b>EXAMINED</b><span>EVERY BYTE &#183; EVERY READER</span></div>
+    </div>
+
+    <div class="steps" id="steps">
+      <div class="step on" data-step="1">
+        <div class="k">Siemens SIM4LKE ECU &#183; Mercedes &#183; 1 MiB / 29F800</div>
+        <h1>You paid for a tune. The car feels no different.</h1>
+        <p>Sometimes nothing changed at all. Sometimes the wrong table was touched and the car got worse.
+          All three feel identical from the driver's seat &#8212; the file is the only thing that tells them
+          apart.</p>
+        <div class="cta"><a class="btn" href="mailto:huyezarc@gmail.com?subject=Verify%20my%20SIM4LKE%20ECU%20file%20-%20first%20two%20free&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send your first file <svg width="13" height="13" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h11M7 2l5 5-5 5" stroke="currentColor" stroke-width="2"/></svg></a></div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="k">01 &#183; the file</div>
+        <h2>Every table traced to the code that reads it</h2>
+        <p>A table nothing reads is a change that does not exist. That is the placebo: edited, flashed,
+          and never asked for by the firmware.</p>
+      </div>
+      <div class="step" data-step="3">
+        <div class="k">02 &#183; the verdict</div>
+        <h2>Placebo, worse, or working as intended</h2>
+        <p>One file, one verdict, with the evidence attached &#8212; and nothing that leaves this desk.</p>
       </div>
     </div>
-    
-<div class="stage" aria-hidden="true">
-  <div class="scene">
-    <div class="face f-top"></div><div class="face f-bottom"></div>
-    <div class="face f-left"></div><div class="face f-right"></div>
-    <div class="face f-front"><div class="fins"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-    <div class="face f-back"></div>
-    <div class="deck">
-      <div class="t">SIEMENS <b>SIM4LKE</b><br>5WK9 &#183; 2711539879<br>M271 KOMPRESSOR</div>
-      <div class="pins"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-    </div>
-    <div class="conn"><i></i><i></i></div>
-  </div>
-  <div class="chipcard">
-    <div class="chipin"><div><b>29F800</b><span>1 MiB &#183; PSOP-44</span></div></div>
-    <div class="cpin t"><i></i><i></i><i></i><i></i></div>
-    <div class="cpin b"><i></i><i></i><i></i><i></i></div>
-  </div>
-  <div class="stamp2"><b>EXAMINED</b><span>EVERY BYTE &#183; EVERY READER</span></div>
-  <div class="ribbon">
-    <svg viewBox="0 0 460 92" role="img" aria-label="Knock trace breathing with a spike">
-      <path d="M0 64h34l8-34 9 46 8-38 10 30 10-18 16-6h26l10 8h30l10-28 9 40 8-24 12 30 9-14 14-8h32l10 6h28"/>
-      <circle cx="292" cy="36" r="3"/>
-    </svg>
   </div>
 </div>
-
-  </div>
-</header>
 
 <main>
 <dl class="wrap scoperow">
@@ -116,10 +117,12 @@
       <h3>Nothing was read</h3>
       <p>Tables edited, exported, flashed &#8212; and never read by the firmware. The car is exactly what it
         was. It still feels sharper, because you paid.</p>
-      <svg viewBox="0 0 240 60" role="img" aria-label="Flat line, no change">
-        <line x1="0" y1="59" x2="240" y2="59" stroke="#DCDCD6"/>
-        <path d="M2 36h236" stroke="#9A9A9A" stroke-width="1.6" stroke-dasharray="5 5"/>
-        <text x="2" y="16" font-family="Cascadia Mono,monospace" font-size="8" fill="#9A9A9A" letter-spacing="1.6">NO CHANGE</text>
+      <svg viewBox="0 0 240 64" role="img" aria-label="Flat trace: nothing changed">
+        <line x1="0" y1="6" x2="240" y2="6" stroke="#EDEDE8"/>
+        <line x1="0" y1="52" x2="240" y2="52" stroke="#DCDCD6"/>
+        
+        <path d="M4 36h232" stroke="#9A9A9A" stroke-width="2"/>
+        <circle cx="120" cy="36" r="3.5" fill="#FBFAF7" stroke="#9A9A9A" stroke-width="2"/>
       </svg>
     </article>
     <article>
@@ -127,22 +130,26 @@
       <h3>The engine fights it</h3>
       <p>Throttle flattened, a limiter lifted that should have stayed, timing pushed where knock control now
         corrects constantly. Nothing on the dash explains it.</p>
-      <svg viewBox="0 0 240 60" role="img" aria-label="Line falling">
-        <line x1="0" y1="59" x2="240" y2="59" stroke="#DCDCD6"/>
-        <path d="M2 16h52l26-4h48l110 42" stroke="#0A0A0A" stroke-width="1.8" fill="none"/>
-        <path d="M128 12L238 54" stroke="#C4242C" stroke-width="1.8"/>
+      <svg viewBox="0 0 240 64" role="img" aria-label="Trace falling away">
+        <line x1="0" y1="6" x2="240" y2="6" stroke="#EDEDE8"/>
+        <line x1="0" y1="52" x2="240" y2="52" stroke="#DCDCD6"/>
+        
+        <path d="M4 24h52l24-2h44l108 28" stroke="#0A0A0A" stroke-width="2" fill="none"/>
+        <circle cx="124" cy="22" r="3.5" fill="#FBFAF7" stroke="#0A0A0A" stroke-width="2"/>
       </svg>
     </article>
     <article>
       <div class="k" style="color:#0A0A0A">03 &#183; Dues later</div>
-      <h3>It pulls &#8212; until it does not</h3>
+      <h3>It pulls, then it ends</h3>
       <p>Lean under load, or advance it was never built for. Feels like the best money you spent. The bill
         arrives at full throttle, in fourth gear.</p>
-      <svg viewBox="0 0 240 60" role="img" aria-label="Line rising then dropping sharply">
-        <line x1="0" y1="59" x2="240" y2="59" stroke="#DCDCD6"/>
-        <path d="M2 48h38l28-12h44l26-10" stroke="#0A0A0A" stroke-width="1.8" fill="none"/>
-        <path d="M138 26h28l72 32" stroke="#C4242C" stroke-width="2" fill="none"/>
-        <rect x="134" y="22" width="8" height="8" fill="#C4242C"/>
+      <svg viewBox="0 0 240 64" role="img" aria-label="Trace rising then dropping hard">
+        <line x1="0" y1="6" x2="240" y2="6" stroke="#EDEDE8"/>
+        <line x1="0" y1="52" x2="240" y2="52" stroke="#DCDCD6"/>
+        
+        <path d="M4 46h38l26-10h46l28-8" stroke="#0A0A0A" stroke-width="2" fill="none"/>
+        <circle cx="142" cy="28" r="3.5" fill="#FBFAF7" stroke="#C4242C" stroke-width="2"/>
+        <path d="M145 30h22l69 22" stroke="#C4242C" stroke-width="2" fill="none"/>
       </svg>
     </article>
   </div>
@@ -190,9 +197,53 @@
   </div>
 </div>
 </main>
+
 <footer class="wrap">
   <span>SIM4LKE ECU Calibration &#183; verification, bytes to code</span>
   <span><a href="mailto:huyezarc@gmail.com">huyezarc@gmail.com</a></span>
 </footer>
+
+
+
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    var pin = document.getElementById('pin');
+    if (!pin) return;
+    var steps = Array.prototype.slice.call(document.querySelectorAll('.pin .step'));
+    var prog = document.querySelector('.prog');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduce) { steps.forEach(function (s) { s.classList.add('on'); }); return; }
+    if (!window.gsap || !window.ScrollTrigger) { steps.forEach(function (s) { s.classList.add('on'); }); return; }
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.set('.pin .stamp2', { scale: 1.4 });
+
+    gsap.matchMedia().add('(min-width: 981px)', function () {
+      var tl = gsap.timeline({ scrollTrigger: {
+        trigger: pin, start: 'top top', end: '+=220%', pin: true, scrub: 0.6,
+        onUpdate: function (self) {
+          var p = self.progress;
+          if (prog) prog.style.transform = 'scaleX(' + p + ')';
+          var idx = p < 0.34 ? 0 : (p < 0.68 ? 1 : 2);
+          steps.forEach(function (s, i) { s.classList.toggle('on', i === idx); });
+        }
+      }});
+      tl.to('.pin .scene', { rotateY: 26, rotateX: -8, ease: 'none' }, 0)
+        .to('.pin .scene', { rotateY: 118, ease: 'none' }, 0.5)
+        .to('.pin .chipcard', { opacity: 1, duration: 0.3, ease: 'none' }, 0.25)
+        .to('.pin .stamp2', { opacity: 1, duration: 0.25, ease: 'back.out(2)' }, 0.74);
+      return function () {};
+    });
+
+    // below 981px the band is normal flow: show every caption, hide the progress rule
+    gsap.matchMedia().add('(max-width: 980px)', function () {
+      steps.forEach(function (s) { s.classList.add('on'); });
+      if (prog) prog.style.display = 'none';
+      return function () {};
+    });
+  });
+</script>
+
 </body>
 </html>
