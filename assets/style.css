@@ -282,8 +282,9 @@ body{background:var(--white)}
 .pin .stamp2 b{display:block;font-size:13px;letter-spacing:.2em}
 .pin .stamp2 span{display:block;font-size:7.5px;letter-spacing:.2em;margin-top:3px}
 
-.pin .steps{display:grid;gap:22px;max-width:520px}
-.pin .step{opacity:.2;transition:opacity .28s ease}
+.pin .steps{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;max-width:560px}
+.pin .step{opacity:0;transition:opacity .28s ease}
+.pin .step.on{opacity:1}
 .pin .step.on{opacity:1}
 .pin .step .k{font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
   color:var(--accent)}
@@ -292,7 +293,8 @@ body{background:var(--white)}
 .pin .step p{color:#A9AEAE;margin:0;font-size:16px}
 .pin .step .cta{margin-top:14px}
 .pin .sticky > *{min-width:0}
-.pin .step,.pin .steps{min-width:0;overflow-wrap:break-word}
+.pin .step,.pin .steps{min-width:0}
+.pin .step h1,.pin .step h2,.pin .step p{overflow-wrap:normal;word-break:normal;hyphens:none}
 @supports (height:100dvh){.pin .sticky{min-height:100dvh}}
 @media(max-width:640px){.scoperow{grid-template-columns:1fr 1fr}}
 @media(max-width:380px){
@@ -328,7 +330,7 @@ body{background:var(--white)}
   .iconrow .ic{border-right:1px solid var(--rule)}
   .iconrow .ic:nth-child(3n){border-right:1px solid var(--rule)}
   .hdnav{display:none}
-  .pin .sticky{grid-template-columns:1fr;min-height:auto;padding:40px 20px 48px;gap:20px}
+  .pin .sticky{grid-template-columns:1fr;min-height:auto;padding:40px clamp(20px,4vw,44px) 48px;gap:20px}
   .pin .visual{height:auto;aspect-ratio:1.5/1;min-height:260px;max-height:420px;width:100%}
   .pin .scene{transform:rotateX(-14deg) rotateY(-24deg) scale(.82)}
   .pin .chipcard{right:0;top:16px;width:126px;height:82px}
