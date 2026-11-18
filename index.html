@@ -234,7 +234,20 @@
         .to('.pin .scene', { rotateY: 118, ease: 'none' }, 0.5)
         .to('.pin .chipcard', { opacity: 1, duration: 0.3, ease: 'none' }, 0.25)
         .to('.pin .stamp2', { opacity: 1, duration: 0.25, ease: 'back.out(2)' }, 0.74);
-      return function () {};
+      // leaving the pinned range must hand the scene back to CSS, otherwise GSAP's inline
+      // transform survives the resize and the box sits up to 27px off centre on a phone
+      return function () {
+        gsap.set(['.pin .scene', '.pin .chipcard', '.pin .stamp2'],
+                { clearProps: 'transform,opacity' });
+        if (prog) prog.style.transform = 'scaleX(0)';
+      };
+    });
+
+    // a resize inside the stacked range can leave a stale inline transform on the 3D box
+    window.addEventListener('resize', function () {
+      if (window.matchMedia('(min-width: 981px)').matches) return;
+      var sc = document.querySelector('.pin .scene');
+      if (sc) sc.style.transform = '';
     });
 
     // below 981px the band is normal flow: show every caption, hide the progress rule
