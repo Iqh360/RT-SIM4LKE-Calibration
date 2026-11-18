@@ -35,7 +35,7 @@
         <div class="conn"><i></i><i></i></div>
       </div>
       <div class="chipcard"><div><b>29F800</b><span>1 MiB &#183; PSOP-44</span></div></div>
-      <div class="stamp2"><b>EXAMINED</b><span>EVERY BYTE &#183; EVERY READER</span></div>
+      <div class="stampwrap"><div class="stamp2"><b>EXAMINED</b><span>EVERY BYTE &#183; EVERY READER</span></div></div>
     </div>
 
     <div class="steps" id="steps">
@@ -218,9 +218,9 @@
     if (reduce) { steps.forEach(function (s) { s.classList.add('on'); }); return; }
     if (!window.gsap || !window.ScrollTrigger) { steps.forEach(function (s) { s.classList.add('on'); }); return; }
     gsap.registerPlugin(ScrollTrigger);
-    gsap.set('.pin .stamp2', { scale: 1.4 });
 
     gsap.matchMedia().add('(min-width: 981px)', function () {
+      gsap.set('.pin .stamp2', { scale: 1.4 });
       var tl = gsap.timeline({ scrollTrigger: {
         trigger: pin, start: 'top top', end: '+=220%', pin: true, scrub: 0.6,
         onUpdate: function (self) {

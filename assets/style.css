@@ -236,10 +236,10 @@ body{background:var(--white)}
   background-image:linear-gradient(to right,rgba(255,255,255,.028) 1px,transparent 1px),
     linear-gradient(to bottom,rgba(255,255,255,.028) 1px,transparent 1px);background-size:64px 64px}
 .pin .sticky{position:sticky;top:0;min-height:100svh;display:grid;grid-template-columns:1.02fr 1fr;
-  align-items:center;gap:40px;max-width:1200px;margin:0 auto;padding:0 40px}
+  align-items:center;gap:40px;max-width:1200px;margin:0 auto;padding:0 40px;min-width:0}
 .pin .visual{position:relative;height:560px;display:grid;place-items:center;perspective:1100px}
 .pin .scene{position:relative;width:280px;height:168px;transform-style:preserve-3d;
-  transform:rotateX(-14deg) rotateY(-32deg)}
+  transform:rotateX(-14deg) rotateY(-32deg);margin-left:-22px}
 .pin .face{position:absolute;border:1px solid #737C84;background:linear-gradient(155deg,#2C3339,#161A1E);
   box-shadow:inset 0 1px 0 rgba(255,255,255,.10),inset 0 -1px 0 rgba(0,0,0,.55)}
 .pin .f-front{width:280px;height:168px;transform:translateZ(52px)}
@@ -266,7 +266,8 @@ body{background:var(--white)}
 .pin .chipcard b{font-family:var(--mono);font-size:12px;letter-spacing:.18em;color:var(--accent)}
 .pin .chipcard span{display:block;font-family:var(--mono);font-size:8px;letter-spacing:.18em;
   color:#8B9096;margin-top:5px;text-align:center}
-.pin .stamp2{position:absolute;left:6px;bottom:66px;border:3px solid var(--accent);padding:7px 12px;animation:none;
+.stampwrap{position:absolute;left:50%;bottom:54px;transform:translateX(-50%)}
+.pin .stamp2{position:relative;border:3px solid var(--accent);padding:7px 12px;animation:none;
   transform:rotate(-8deg);opacity:0;font-family:var(--mono);color:var(--accent)}
 .pin .stamp2 b{display:block;font-size:13px;letter-spacing:.2em}
 .pin .stamp2 span{display:block;font-size:7.5px;letter-spacing:.2em;margin-top:3px}
@@ -280,12 +281,33 @@ body{background:var(--white)}
   font-weight:800;text-transform:uppercase;text-wrap:balance;color:#fff}
 .pin .step p{color:#A9AEAE;margin:0;font-size:16px}
 .pin .step .cta{margin-top:14px}
+.pin .sticky > *{min-width:0}
+@media(max-width:640px){.scoperow{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){
+  .scoperow{grid-template-columns:1fr}
+  .scoperow div{border-right:0;border-bottom:1px solid var(--rule)}
+  .scoperow div:last-child{border-bottom:0}
+}
+.pin .visual,.pin .steps{width:100%}
 .prog{position:fixed;left:0;top:0;height:3px;background:var(--accent);width:100%;z-index:60;
   transform-origin:0 50%;transform:scaleX(0);pointer-events:none}
 
 /* 44px hit area for the section links (measured by ui.audit_page as 30.3px) */
 .hdnav a{display:inline-flex;align-items:center;min-height:44px;padding:0 4px}
 .hdbrand{display:inline-flex;align-items:center;min-height:44px}
+/* ── responsive package (validated in responsive.preview.html) ── */
+@media(max-width:640px){.scoperow{grid-template-columns:1fr 1fr}}
+@media(max-width:380px){
+  .scoperow{grid-template-columns:1fr}
+  .scoperow div{border-right:0;border-bottom:1px solid var(--rule)}
+  .scoperow div:last-child{border-bottom:0}
+}
+.pin .step h1{font-size:clamp(30px,7.4vw,40px);line-height:1.02}
+.pin .step h2{font-size:clamp(22px,5.2vw,38px)}
+@media(min-width:1500px){
+  .pin .step h1{font-size:clamp(40px,3.1vw,56px)}
+  .pin .sticky,.wrap{max-width:1320px}
+}
 @media(max-width:980px){
   .hdbar{flex-wrap:wrap;row-gap:10px}
   .live{display:none}
@@ -296,7 +318,8 @@ body{background:var(--white)}
   .pin .visual{height:330px}
   .pin .scene{transform:rotateX(-14deg) rotateY(-24deg) scale(.82)}
   .pin .chipcard{right:0;top:16px;width:126px;height:82px}
-  .pin .stamp2{left:0;bottom:16px;transform:rotate(-6deg) scale(.85)}
+  .stampwrap{left:50%;bottom:14px;transform:translateX(-50%)}
+  .pin .stamp2{transform:rotate(-6deg) scale(.85)}
   .pin .step{opacity:1}
 }
 @media(prefers-reduced-motion:reduce){
