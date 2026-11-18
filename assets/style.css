@@ -314,13 +314,20 @@ body{background:var(--white)}
   .iconrow{grid-template-columns:repeat(auto-fit,minmax(132px,1fr))}
   .iconrow .ic{border-right:1px solid var(--rule)}
   .iconrow .ic:nth-child(3n){border-right:1px solid var(--rule)}
+  .hdnav{display:none}
   .pin .sticky{grid-template-columns:1fr;min-height:auto;padding:40px 20px 48px;gap:20px}
-  .pin .visual{height:330px}
+  .pin .visual{height:auto;aspect-ratio:1.5/1;min-height:260px;max-height:420px;width:100%}
   .pin .scene{transform:rotateX(-14deg) rotateY(-24deg) scale(.82)}
   .pin .chipcard{right:0;top:16px;width:126px;height:82px}
   .stampwrap{left:50%;bottom:14px;transform:translateX(-50%)}
   .pin .stamp2{transform:rotate(-6deg) scale(.85)}
   .pin .step{opacity:1}
+}
+@media(max-width:400px){
+  .pin .cta .btn{width:100%;justify-content:center}
+}
+@media(max-width:420px){
+  .pin .deckface .t{display:none}
 }
 @media(prefers-reduced-motion:reduce){
   .pin .step{opacity:1;transition:none}
