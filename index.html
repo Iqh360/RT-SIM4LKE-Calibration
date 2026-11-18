@@ -215,19 +215,52 @@
     var steps = Array.prototype.slice.call(document.querySelectorAll('.pin .step'));
     var prog = document.querySelector('.prog');
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // one-way reveal: an element that has been seen never fades out again
+    var revealEls = Array.prototype.slice.call(
+      document.querySelectorAll('main > section:not(#pin), main > div.offer, footer'));
+    if (!reduce && 'IntersectionObserver' in window) {
+      revealEls.forEach(function (el) { el.classList.add('reveal'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.06 });
+      revealEls.forEach(function (el) { io.observe(el); });
+      // safety net: a jump (anchor link, restored scroll) can skip a section without ever
+      // intersecting it, which would leave it invisible. Anything already above the fold is shown.
+      var ticking = false;
+      function sweep() {
+        ticking = false;
+        revealEls.forEach(function (el) {
+          if (!el.classList.contains('in') && el.getBoundingClientRect().top < innerHeight * 0.95) {
+            el.classList.add('in');
+            io.unobserve(el);
+          }
+        });
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(sweep); }
+      }, { passive: true });
+      window.addEventListener('load', sweep);
+      sweep();
+    }
     if (reduce) { steps.forEach(function (s) { s.classList.add('on'); }); return; }
     if (!window.gsap || !window.ScrollTrigger) { steps.forEach(function (s) { s.classList.add('on'); }); return; }
     gsap.registerPlugin(ScrollTrigger);
 
     gsap.matchMedia().add('(min-width: 981px)', function () {
       gsap.set('.pin .stamp2', { scale: 1.4 });
+      var maxIdx = 0;
       var tl = gsap.timeline({ scrollTrigger: {
         trigger: pin, start: 'top top', end: '+=220%', pin: true, scrub: 0.6,
         onUpdate: function (self) {
           var p = self.progress;
           if (prog) prog.style.transform = 'scaleX(' + p + ')';
           var idx = p < 0.34 ? 0 : (p < 0.68 ? 1 : 2);
-          steps.forEach(function (s, i) { s.classList.toggle('on', i === idx); });
+          if (idx < maxIdx) idx = maxIdx;            // never un-show a caption you already reached
+          maxIdx = idx;
+          steps.forEach(function (s, i) { s.classList.toggle('on', i <= idx); });
         }
       }});
       tl.to('.pin .scene', { rotateY: 26, rotateX: -8, ease: 'none' }, 0)

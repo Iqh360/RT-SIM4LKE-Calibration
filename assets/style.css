@@ -283,6 +283,10 @@ body{background:var(--white)}
 .pin .stamp2 span{display:block;font-size:7.5px;letter-spacing:.2em;margin-top:3px}
 
 .pin .steps{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;max-width:560px}
+noscript .reveal{opacity:1 !important;transform:none !important}
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .55s ease,transform .55s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
 .pin .step{opacity:0;transition:opacity .28s ease}
 .pin .step.on{opacity:1}
 .pin .step.on{opacity:1}
