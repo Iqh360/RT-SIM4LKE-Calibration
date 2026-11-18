@@ -222,7 +222,7 @@ body{background:var(--white)}
 .scoperow dt{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
   color:var(--soft);margin-bottom:6px}
 .scoperow dd{margin:0;font-size:14px;font-weight:600}
-.iconrow{display:grid;grid-template-columns:repeat(6,1fr);border-bottom:1px solid var(--rule)}
+.iconrow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-bottom:1px solid var(--rule)}
 .iconrow .ic{padding:22px 15px 20px;border-right:1px solid var(--rule)}
 .iconrow .ic:last-child{border-right:0}
 .iconrow svg{display:block;width:100%;height:68px;color:var(--ink);
