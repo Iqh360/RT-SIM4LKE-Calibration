@@ -9,6 +9,117 @@
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <linearGradient id="T" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a4349"/><stop offset="1" stop-color="#20272b"/></linearGradient>
+  <linearGradient id="L" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#262e33"/><stop offset="1" stop-color="#171d21"/></linearGradient>
+  <linearGradient id="R" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1e2529"/><stop offset="1" stop-color="#12171a"/></linearGradient>
+
+  <!-- 1 ECU unit: iso chassis + fins + connector -->
+  <symbol id="i-ecu" viewBox="0 0 72 72">
+    <path d="M10 34l22-11 30 5-22 11z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M10 34v14l30 5V39z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M40 39v14l22-11V28z" fill="url(#R)" stroke="currentColor" stroke-width="1.2"/>
+    <g stroke="currentColor" stroke-width=".9" opacity=".7">
+      <path d="M16 38v10M20 39v10M24 40v10M28 41v10M32 42v10"/>
+    </g>
+    <path d="M44 33l12 2v6l-12-2z" fill="#0f1417" stroke="currentColor" stroke-width="1.1"/>
+  </symbol>
+
+  <!-- 2 29F800: iso flat package with pins -->
+  <symbol id="i-chip" viewBox="0 0 72 72">
+    <path d="M18 32l18-9 20 3-18 9z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M18 32v10l20 3V35z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M38 35v10l18-9V26z" fill="url(#R)" stroke="currentColor" stroke-width="1.2"/>
+    <g stroke="currentColor" stroke-width="1.6">
+      <path d="M22 40h2M26 41h2M30 41h2M34 42h2"/>
+      <path d="M40 39h2M44 38h2M48 37h2"/>
+    </g>
+    <path d="M24 34l10-5" stroke="#c4242c" stroke-width="1.8" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- 3 Caliper: two iso blocks with the band between them -->
+  <symbol id="i-caliper" viewBox="0 0 72 72">
+    <path d="M12 34l14-7 12 3-14 7z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M12 34v10l12 3V37z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M46 30l14-7 12 3-14 7z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M46 30v10l12 3V33z" fill="url(#R)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M26 37l20-4" stroke="#c4242c" stroke-width="2.2" stroke-dasharray="3 3"/>
+  </symbol>
+
+  <!-- 4 Knock ladder: iso stairs -->
+  <symbol id="i-knock" viewBox="0 0 72 72">
+    <path d="M12 46l10-5 10 3-10 5z" fill="url(#T)" stroke="currentColor" stroke-width="1.1"/>
+    <path d="M22 41l10-5 10 3-10 5z" fill="url(#T)" stroke="currentColor" stroke-width="1.1"/>
+    <path d="M32 36l10-5 10 3-10 5z" fill="url(#T)" stroke="currentColor" stroke-width="1.1"/>
+    <path d="M42 31l10-5 10 3-10 5z" fill="url(#T)" stroke="currentColor" stroke-width="1.1"/>
+    <path d="M12 46v6l10 3v-6z" fill="url(#L)" stroke="currentColor" stroke-width="1.1"/>
+    <path d="M22 41v6l10 3v-6z" fill="url(#L)" stroke="currentColor" stroke-width="1.1"/>
+    <path d="M32 36v6l10 3v-6z" fill="url(#L)" stroke="currentColor" stroke-width="1.1"/>
+    <path d="M42 31v6l10 3v-6z" fill="url(#L)" stroke="currentColor" stroke-width="1.1"/>
+    <path d="M20 30l26-13" stroke="#c4242c" stroke-width="2" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- 5 Kompressor: iso cylinder + outlet -->
+  <symbol id="i-comp" viewBox="0 0 72 72">
+    <ellipse cx="30" cy="28" rx="16" ry="8" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M14 28v14c0 4.4 7.2 8 16 8s16-3.6 16-8V28" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
+    <ellipse cx="30" cy="42" rx="16" ry="8" fill="none" stroke="currentColor" stroke-width="1" opacity=".45"/>
+    <path d="M46 34h10a5 5 0 0 1 0 10H46" fill="none" stroke="currentColor" stroke-width="1.3"/>
+    <circle cx="30" cy="28" r="4" fill="#c4242c" stroke="none"/>
+  </symbol>
+
+  <!-- 6 1 MiB plate -->
+  <symbol id="i-plate" viewBox="0 0 72 72">
+    <path d="M10 32l20-10 26 4-20 10z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M10 32v12l26 4V36z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M36 36v12l20-10V26z" fill="url(#R)" stroke="currentColor" stroke-width="1.2"/>
+    <g stroke="currentColor" stroke-width=".9" opacity=".65">
+      <path d="M16 34h8M16 38h12M16 42h6"/>
+    </g>
+    <path d="M44 35l8-4" stroke="#c4242c" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- 7 10 copies -->
+  <symbol id="i-copies" viewBox="0 0 72 72">
+    <path d="M10 44l24-12 26 6-24 12z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M10 44v6l26 5v-6z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M36 49v6l24-12v-6z" fill="url(#R)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M14 37l24-12 26 6" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".7"/>
+    <path d="M18 30l24-12 26 6" fill="none" stroke="currentColor" stroke-width="1.1" opacity=".45"/>
+    <path d="M20 42l16-8" stroke="#c4242c" stroke-width="1.9" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- 8 unread table -->
+  <symbol id="i-unread" viewBox="0 0 72 72">
+    <path d="M12 38l24-12 24 10-24 12z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M12 38v7l24 5v-6z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M36 44v6l24-12v-6z" fill="url(#R)" stroke="currentColor" stroke-width="1.2"/>
+    <g stroke="currentColor" stroke-width=".9" opacity=".5">
+      <path d="M22 38l24-10M30 41l24-10M16 36l24 6M24 33l24 6"/>
+    </g>
+    <path d="M14 56L56 20" stroke="#c4242c" stroke-width="2.6" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- 9 lambda plate -->
+  <symbol id="i-lambda" viewBox="0 0 72 72">
+    <path d="M10 40l24-12 26 6-24 12z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M10 40v8l26 5v-7z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M36 46v7l24-12v-7z" fill="url(#R)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M16 42l7-4 6 6 7-8 6 6 7-4" fill="none" stroke="#c4242c" stroke-width="2.1"
+          stroke-linejoin="round" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- 10 connector -->
+  <symbol id="i-conn" viewBox="0 0 72 72">
+    <path d="M16 32l18-9 22 5-18 9z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M16 32v14l22 5V37z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
+    <path d="M38 37v14l18-9V28z" fill="url(#R)" stroke="currentColor" stroke-width="1.2"/>
+    <g fill="none" stroke="currentColor" stroke-width="1.1" opacity=".9">
+      <path d="M24 36v6M30 38v6M36 40v6"/>
+      <circle cx="24" cy="45" r="1.4"/><circle cx="30" cy="47" r="1.4"/><circle cx="36" cy="49" r="1.4"/>
+    </g>
+  </symbol>
+</defs></svg>
 <div class="prog" aria-hidden="true"></div>
 <header class="hero-dark">
   <div class="wrap hdbar">
@@ -69,68 +180,18 @@
   <div><dt>First two</dt><dd>Free, then talk</dd></div>
 </dl>
 
-<div class="wrap">
-<div class="iconrow">
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="ECU unit"><g fill="none" stroke="currentColor" stroke-width="1.4">
-      <path d="M10 22l14-8 26 4 4 20-14 8-26-4z"/><path d="M10 22v14l14 8V30"/><path d="M24 30l26 4"/>
-      <path d="M33 22v20M38 23v20M43 24v20" opacity=".7"/></g></svg>
-    <div class="k">ECU unit</div><div class="s">what you send</div>
-  </div>
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="Flash chip"><g fill="none" stroke="currentColor" stroke-width="1.4">
-      <rect x="16" y="16" width="32" height="32" rx="1"/>
-      <path d="M12 22h4M12 28h4M12 34h4M12 40h4M48 22h4M48 28h4M48 34h4M48 40h4"/>
-      <path d="M22 22h8M22 34h14"/></g></svg>
-    <div class="k">29F800</div><div class="s">1 MiB read</div>
-  </div>
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="Caliper"><g fill="none" stroke="currentColor" stroke-width="1.5">
-      <path d="M10 18v28M54 18v28"/><path d="M10 26h12l6 6-6 6H10"/><path d="M54 26H42l-6 6 6 6h12"/>
-      <path d="M22 32h8M34 32h8" stroke-dasharray="2 2"/></g></svg>
-    <div class="k">Caliper</div><div class="s">value inside the band</div>
-  </div>
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="Knock ladder"><g fill="none" stroke="currentColor" stroke-width="1.5">
-      <path d="M10 50V20M18 50V28M26 50V34M34 50V40M42 50V44M50 50V46"/><path d="M8 50h48"/></g></svg>
-    <div class="k">Knock ladder</div><div class="s">timing defensible</div>
-  </div>
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="Kompressor scroll"><g fill="none" stroke="currentColor" stroke-width="1.5">
-      <path d="M32 32a4 4 0 014 4 8 8 0 01-8 8 14 14 0 0014-14 20 20 0 01-20 20 26 26 0 0026-26"/>
-      <circle cx="32" cy="32" r="2" fill="currentColor" stroke="none"/></g></svg>
-    <div class="k">Kompressor</div><div class="s">the blower it runs</div>
-  </div>
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="Milled plate"><g fill="none" stroke="currentColor" stroke-width="1.5">
-      <path d="M10 22l14-8 30 5-14 8z"/><path d="M10 22v16l30 5V27"/><path d="M40 27l14-8v16l-14 8"/>
-      <path d="M18 24h8M18 31h12" opacity=".6"/></g></svg>
-    <div class="k">1 MiB plate</div><div class="s">the deciding test</div>
-  </div>
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="Ten copies"><g fill="none" stroke="currentColor" stroke-width="1.4">
-      <path d="M12 40l20-10 20 10-20 10z"/><path d="M14 34l20-10 20 10"/><path d="M16 28l20-10 20 10"/></g></svg>
-    <div class="k">10 copies</div><div class="s">one image</div>
-  </div>
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="Unread table"><g fill="none" stroke="currentColor" stroke-width="1.4">
-      <rect x="14" y="14" width="36" height="36"/><path d="M14 26h36M14 38h36M26 14v36M38 14v36" opacity=".55"/>
-      <path d="M12 50L52 12"/></g></svg>
-    <div class="k">Unread table</div><div class="s">not read by code</div>
-  </div>
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="Lambda"><g fill="none" stroke="currentColor" stroke-width="1.5">
-      <path d="M10 42h10l6-16 7 28 6-14h15"/><path d="M8 50h48" opacity=".5"/></g></svg>
-    <div class="k">Lambda</div><div class="s">AFR under load</div>
-  </div>
-  <div class="ic">
-    <svg viewBox="0 0 64 64" role="img" aria-label="Connector"><g fill="none" stroke="currentColor" stroke-width="1.4">
-      <rect x="16" y="20" width="32" height="24"/>
-      <path d="M22 26v6M28 26v6M34 26v6M40 26v6M22 36v6M28 36v6M34 36v6M40 36v6" opacity=".8"/></g></svg>
-    <div class="k">Connector</div><div class="s">how it arrives</div>
-  </div>
-</div>
-</div>
+<div class="iconslab"><div class="strip">
+    <div class="tile"><span class="idx">01</span><svg viewBox="0 0 72 72" style="--s:1.06" aria-hidden="true"><use href="#i-ecu"/></svg><span class="k">ECU unit</span><span class="v">SENT</span></div>
+    <div class="tile"><span class="idx">02</span><svg viewBox="0 0 72 72" style="--s:1.22" aria-hidden="true"><use href="#i-chip"/></svg><span class="k">29F800</span><span class="v">1 MiB</span></div>
+    <div class="tile"><span class="idx">03</span><svg viewBox="0 0 72 72" style="--s:1.14" aria-hidden="true"><use href="#i-caliper"/></svg><span class="k">Caliper</span><span class="v">BAND</span></div>
+    <div class="tile"><span class="idx">04</span><svg viewBox="0 0 72 72" style="--s:0.98" aria-hidden="true"><use href="#i-knock"/></svg><span class="k">Knock ladder</span><span class="v hot">TIMING</span></div>
+    <div class="tile"><span class="idx">05</span><svg viewBox="0 0 72 72" style="--s:1.0" aria-hidden="true"><use href="#i-comp"/></svg><span class="k">Kompressor</span><span class="v">M271</span></div>
+    <div class="tile"><span class="idx">06</span><svg viewBox="0 0 72 72" style="--s:1.16" aria-hidden="true"><use href="#i-plate"/></svg><span class="k">1 MiB plate</span><span class="v">BYTES</span></div>
+    <div class="tile"><span class="idx">07</span><svg viewBox="0 0 72 72" style="--s:1.02" aria-hidden="true"><use href="#i-copies"/></svg><span class="k">10 copies</span><span class="v">10x</span></div>
+    <div class="tile"><span class="idx">08</span><svg viewBox="0 0 72 72" style="--s:1.0" aria-hidden="true"><use href="#i-unread"/></svg><span class="k">Unread table</span><span class="v hot">PLACEBO</span></div>
+    <div class="tile"><span class="idx">09</span><svg viewBox="0 0 72 72" style="--s:1.04" aria-hidden="true"><use href="#i-lambda"/></svg><span class="k">Lambda</span><span class="v">AFR</span></div>
+    <div class="tile"><span class="idx">10</span><svg viewBox="0 0 72 72" style="--s:1.18" aria-hidden="true"><use href="#i-conn"/></svg><span class="k">Connector</span><span class="v">OBD</span></div>
+</div></div>
 
 <section id="outcomes" class="wrap">
   <div class="lab"><span class="n">01</span><h2>Placebo, worse, or a bill you have not received yet</h2><span class="t"></span></div>
