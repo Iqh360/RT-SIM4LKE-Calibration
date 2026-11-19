@@ -11,3 +11,6 @@ assets/img/ecu-plate*.png
 
 # Blender frame sequence (only the assembled webp is shipped)
 assets/img/turntable/
+
+# Blender icon sources (only the webp set ships)
+assets/img/icons/*.png
