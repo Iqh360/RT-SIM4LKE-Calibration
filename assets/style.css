@@ -515,6 +515,8 @@ h1,h2,h3{text-wrap:balance}
 @media(max-width:480px){
   .iconslab .tile svg{width:56px;height:56px}
 }
+
+.mono,.iconslab .k,.iconslab .v,.evband .lbl{font-variant-numeric:tabular-nums}
 .evband{border-bottom:1px solid var(--rule);padding:34px 0 30px}
 .evband .in{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:34px;align-items:center}
 .evband .lbl{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
@@ -523,17 +525,15 @@ h1,h2,h3{text-wrap:balance}
 .evband .row{display:flex;gap:5px;align-items:flex-end}
 .evband .cpy{width:26px;height:56px;border:1px solid #b9b4aa;background:#fff;position:relative}
 .evband .cpy::before{content:"";position:absolute;left:5px;right:5px;top:8px;height:1px;background:#cfcac0;
-  box-shadow:0 8px 0 #cfcac0,0 16px 0 #cfcac0,0 24px 0 #cfcac0,0 32px 0 #cfcac0}
 .evband .cpy.alt{border-color:var(--accent);background:#fdf3f2}
 .evband .cpy.alt::after{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:5px;background:var(--accent)}
 .evband .idx{display:flex;gap:5px;margin-top:7px}
 .evband .idx span{width:26px;text-align:center;font-family:var(--mono);font-size:8px;letter-spacing:.06em;color:#5f5a51}
 .evband .idx span.hot{color:var(--accent);font-weight:700}
-@media(max-width:980px){
   .evband .in{grid-template-columns:1fr;gap:18px}
   .evband .cpy,.evband .idx span{width:22px}
   .evband .cpy{height:46px}
-}
+.rednote{font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6b665c;margin:6px 0 0}
 .hero-dark .blueprint{position:absolute;inset:0;width:100%;height:100%;opacity:.62;pointer-events:none;
   -webkit-mask-image:linear-gradient(105deg,#000 0%,#000 58%,transparent 92%);
   mask-image:linear-gradient(105deg,#000 0%,#000 58%,transparent 92%)}
