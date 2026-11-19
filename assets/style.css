@@ -398,6 +398,37 @@ noscript .reveal{opacity:1 !important;transform:none !important}
 h1,h2,h3{text-wrap:balance}
 .mono,.iconslab .k,.iconslab .v,.evband .lbl{font-variant-numeric:tabular-nums}
 
+/* hero stage: scan line + idle bob (motion, not decoration) */
+.pin .visual{overflow:visible}
+.pin .visual .scan{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,
+  transparent,#f2544a 18%,#f2544a 82%,transparent);opacity:.55;pointer-events:none;
+  animation:scanmove 6.5s cubic-bezier(.45,0,.55,1) infinite}
+@keyframes scanmove{0%{top:22%;opacity:0}12%{opacity:.6}88%{opacity:.6}100%{top:78%;opacity:0}}
+.pin .scene{animation:idlebob 9s ease-in-out infinite}
+@keyframes idlebob{0%,100%{translate:0 0}50%{translate:0 -6px}}
+@media(prefers-reduced-motion:reduce){
+  .pin .visual .scan{display:none}
+  .pin .scene{animation:none}
+}
+/* hero object: Blender turntable on desktop, CSS box elsewhere */
+.turbine{display:none}
+.specplate{display:none}
+@media(min-width:981px){
+  .pin .visual .turbine{display:block;width:min(470px,80%);height:auto;margin:4px auto 0;
+    filter:drop-shadow(0 26px 44px rgba(0,0,0,.6))}
+  .pin .visual::after{content:"";position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);
+    width:min(560px,92%);aspect-ratio:1;pointer-events:none;z-index:-1;
+    background:radial-gradient(circle,rgba(242,84,74,.14),transparent 62%)}
+  .pin .visual .scene,.pin .visual .stampwrap,.pin .visual .chipcard{display:none}
+  .pin .visual .specplate{display:grid;gap:5px;justify-items:center;margin-top:14px;
+    font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#c3ced4;text-align:center}
+  .pin .visual .specplate b{color:#fff;font-weight:400}
+  .pin .visual .specplate i{color:#f2544a;font-style:normal}
+}
+@media(min-width:981px) and (prefers-reduced-motion:reduce){
+  .pin .visual .turbine{display:none}
+  .pin .visual .scene,.pin .visual .stampwrap,.pin .visual .chipcard{display:revert}
+}
 @media(max-width:400px){
   .pin .cta .btn{width:100%;justify-content:center}
 }
@@ -421,6 +452,34 @@ h1,h2,h3{text-wrap:balance}
 @media(prefers-reduced-motion:reduce){
   .pin .step{opacity:1;transition:none}
   .prog{display:none}
+}
+
+/* idle life: each icon floats on its own phase */
+.iconslab .tile svg{animation:icfloat 7.5s ease-in-out infinite}
+.iconslab .tile:nth-child(2n) svg{animation-delay:-1.8s}
+.iconslab .tile:nth-child(3n) svg{animation-delay:-3.1s}
+.iconslab .tile:nth-child(4n) svg{animation-delay:-4.4s}
+@keyframes icfloat{0%,100%{translate:0 0}50%{translate:0 -4px}}
+
+/* cursor tilt: JS sets --tx/--ty per tile */
+.iconslab .tile{transform:perspective(700px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));
+  transition:transform .35s cubic-bezier(.2,.8,.2,1),background .35s}
+.iconslab .tile:hover{background:#101518}
+
+/* hover: a full turn plus the red rule sweeping under the label */
+.iconslab .tile svg{transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .2s}
+.iconslab .tile:hover svg,.iconslab .tile:focus-within svg{
+  animation:none;opacity:1;transform:scale(calc(var(--s,1) * 1.08)) rotateY(360deg)}
+.iconslab .tile .k{position:relative}
+.iconslab .tile .k::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:#f2544a;
+  transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.iconslab .tile:hover .k::after,.iconslab .tile:focus-within .k::after{width:100%}
+.iconslab .tile:hover .idx{color:#f2544a}
+
+@media(prefers-reduced-motion:reduce){
+  .iconslab .tile svg{animation:none;transition:none}
+  .iconslab .tile:hover svg{transform:scale(var(--s,1))}
+  .iconslab .tile{transform:none}
 }
 .iconslab{background:#0b0c0d;color:#e9edf0;border-bottom:1px solid #242a2e;position:relative}
 .iconslab::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;mix-blend-mode:screen;

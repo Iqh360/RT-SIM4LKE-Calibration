@@ -260,6 +260,9 @@
         <span>cal &#215; 10 &#183; one varies</span>
         <span>2 &#215; 10 &#183; k-line</span>
       </div>
+      <img class="turbine" src="assets/img/ecu-turntable.webp" alt="Siemens SIM4LKE ECU, M271 Kompressor" decoding="async" width="480" height="480">
+      <div class="specplate" aria-hidden="true"><b>SIEMENS SIM4LKE</b><span>5WK9 &#183; 2711539879</span><i>M271 KOMPRESSOR</i></div>
+      <div class="scan" aria-hidden="true"></div>
       <div class="stampwrap"><div class="stamp2"><b>EXAMINED</b><span>EVERY BYTE &#183; EVERY READER</span></div></div>
     </div>
 
@@ -436,6 +439,36 @@
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 
+
+
+    // copy the address (the button exists but had no handler)
+    var cm = document.getElementById('copyMail');
+    if (cm) {
+      cm.addEventListener('click', function () {
+        var v = cm.getAttribute('data-mail');
+        var done = function () { cm.textContent = 'copied'; setTimeout(function () { cm.textContent = 'copy'; }, 1600); };
+        if (navigator.clipboard) { navigator.clipboard.writeText(v).then(done, done); }
+        else {
+          var ta = document.createElement('textarea'); ta.value = v; document.body.appendChild(ta);
+          ta.select(); try { document.execCommand('copy'); } catch (e) {} ta.remove(); done();
+        }
+      });
+    }
+
+    // cursor tilt on the icon slab
+    var slab = document.querySelector('.iconslab');
+    if (slab && !reduce && matchMedia('(hover:hover)').matches) {
+      [].slice.call(slab.querySelectorAll('.tile')).forEach(function (tile) {
+        tile.addEventListener('pointermove', function (ev) {
+          var r = tile.getBoundingClientRect();
+          tile.style.setProperty('--ty', ((ev.clientX - r.left) / r.width - 0.5) * 14 + 'deg');
+          tile.style.setProperty('--tx', (-((ev.clientY - r.top) / r.height - 0.5) * 10) + 'deg');
+        });
+        tile.addEventListener('pointerleave', function () {
+          tile.style.setProperty('--ty', '0deg'); tile.style.setProperty('--tx', '0deg');
+        });
+      });
+    }
 
     var gp = document.querySelector('.gprog i');
     if (gp) {
