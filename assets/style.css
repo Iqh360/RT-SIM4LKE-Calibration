@@ -372,7 +372,7 @@ noscript .reveal{opacity:1 !important;transform:none !important}
   border-bottom:1px solid #242a2e;display:grid;justify-items:start;gap:10px;overflow:hidden;min-width:0}
 .iconslab .tile:nth-child(5n){border-right:0}
 .iconslab .tile .idx{position:absolute;left:18px;top:16px;font-family:var(--mono);font-size:10px;
-  line-height:1;letter-spacing:.18em;color:#63707a}
+  line-height:1;letter-spacing:.18em;color:#8b939a}
 .iconslab .tile svg{width:88px;height:88px;color:#c9d1d6;display:block;
   transform:scale(var(--s,1));transform-origin:left center;transition:transform .25s ease}
 .iconslab .tile:hover svg{transform:scale(var(--s,1)) translateY(-3px)}
