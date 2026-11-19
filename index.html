@@ -6,6 +6,14 @@
 <title>SIM4LKE ECU Calibration — file verification, first two files free</title>
 <meta name="description" content="You paid for a tune and the car feels the same. Send your Siemens SIM4LKE ECU file — a tune, a stock ROM or a read off the car — and find out what is really in it. First two free.">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SIM4LKE ECU Calibration — read the file before you flash it">
+<meta property="og:description" content="Byte-level verification for Siemens SIM4LKE ECU calibration files. First two files free.">
+<meta property="og:image" content="https://iqh360.github.io/RT-SIM4LKE-Calibration/assets/img/og.jpg">
+<meta property="og:url" content="https://iqh360.github.io/RT-SIM4LKE-Calibration/">
+<meta name="twitter:card" content="summary_large_image">
+
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
@@ -281,6 +289,7 @@
   </div>
 </div>
 </main>
+<div class="barcta" aria-hidden="true"><b>first two free</b><a href="mailto:huyezarc@gmail.com?subject=My%20tune%20file%20-%20open%20it%20before%20I%20flash%20it&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send a file &#8594;</a></div>
 
 <footer class="wrap">
   <span>SIM4LKE ECU Calibration &#183; verification, bytes to code</span>
@@ -298,6 +307,18 @@
     var steps = Array.prototype.slice.call(document.querySelectorAll('.pin .step'));
     var prog = document.querySelector('.prog');
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var bar = document.querySelector('.barcta');
+    if (bar) {
+      var toggleBar = function () {
+        var max = document.body.scrollHeight - innerHeight;
+        var on = max > 200 && scrollY > max * 0.4;
+        bar.classList.toggle('on', on);
+        bar.setAttribute('aria-hidden', on ? 'false' : 'true');
+      };
+      addEventListener('scroll', toggleBar, { passive: true });
+      toggleBar();
+    }
 
     // one-way reveal: an element that has been seen never fades out again
     var revealEls = Array.prototype.slice.call(
