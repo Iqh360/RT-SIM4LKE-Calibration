@@ -199,7 +199,18 @@
     <div class="tile"><span class="idx">08</span><svg viewBox="0 0 72 72" style="--s:1.0" aria-hidden="true"><use href="#i-unread"/></svg><span class="k">Unread table</span><span class="v hot">PLACEBO</span></div>
     <div class="tile"><span class="idx">09</span><svg viewBox="0 0 72 72" style="--s:1.04" aria-hidden="true"><use href="#i-lambda"/></svg><span class="k">Lambda</span><span class="v">AFR</span></div>
     <div class="tile"><span class="idx">10</span><svg viewBox="0 0 72 72" style="--s:1.18" aria-hidden="true"><use href="#i-conn"/></svg><span class="k">Connector</span><span class="v">OBD</span></div>
-</div></div>
+</div></div><section class="evband"><div class="wrap in">
+  <div>
+    <div class="lbl">the same map, ten times</div>
+    <h3>Ten copies of the calibration. One of them is not like the others.</h3>
+    <p>A SIM4LKE image repeats its calibration ten times. Copy 08 carries a different variant — so a
+       change written to the first nine is a change the tenth copy never sees.</p>
+  </div>
+  <div>
+    <div class="row"><div class="cpy"></div><div class="cpy"></div><div class="cpy"></div><div class="cpy"></div><div class="cpy"></div><div class="cpy"></div><div class="cpy"></div><div class="cpy alt"></div><div class="cpy"></div><div class="cpy"></div></div>
+    <div class="idx"><span class="">01</span><span class="">02</span><span class="">03</span><span class="">04</span><span class="">05</span><span class="">06</span><span class="">07</span><span class="hot">08</span><span class="">09</span><span class="">10</span></div>
+  </div>
+</div></section>
 
 <section id="outcomes" class="wrap">
   <div class="lab"><span class="n">01</span><h2>Placebo, worse, or a bill you have not received yet</h2><span class="t"></span></div>
@@ -289,6 +300,7 @@
   </div>
 </div>
 </main>
+<nav class="rail" aria-label="Sections"><a href="#outcomes">01 outcomes</a><a href="#checks">02 checks</a><a href="#contact">04 offer</a></nav>
 <div class="barcta" aria-hidden="true"><b>first two free</b><a href="mailto:huyezarc@gmail.com?subject=My%20tune%20file%20-%20open%20it%20before%20I%20flash%20it&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send a file &#8594;</a></div>
 
 <footer class="wrap">
@@ -307,6 +319,22 @@
     var steps = Array.prototype.slice.call(document.querySelectorAll('.pin .step'));
     var prog = document.querySelector('.prog');
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+
+    var rail = document.querySelector('.rail');
+    if (rail) {
+      var links = [].slice.call(rail.querySelectorAll('a'));
+      var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+      var setOn = function (el) {
+        links.forEach(function (a, i) { a.classList.toggle('on', targets[i] === el); });
+      };
+      if ('IntersectionObserver' in window) {
+        var rio = new IntersectionObserver(function (es) {
+          es.forEach(function (en) { if (en.isIntersecting) setOn(en.target); });
+        }, { rootMargin: '-45% 0px -45% 0px' });
+        targets.forEach(function (t) { if (t) rio.observe(t); });
+      }
+    }
 
     var bar = document.querySelector('.barcta');
     if (bar) {
