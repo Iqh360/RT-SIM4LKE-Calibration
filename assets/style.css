@@ -354,7 +354,7 @@ noscript .reveal{opacity:1 !important;transform:none !important}
   .barcta.on{transform:none}
   .barcta b{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;
     color:#8b939a;font-weight:400;white-space:nowrap}
-  .barcta a{flex:1;background:#c4242c;color:#fff;text-align:center;padding:12px 10px;text-decoration:none;
+  .barcta a{flex:1;background:#c4242c;color:#fff;text-align:center;padding:14px 10px;min-height:44px;text-decoration:none;
     font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase}
 }
 @media(max-width:400px){

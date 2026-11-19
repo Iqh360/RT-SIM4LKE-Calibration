@@ -315,6 +315,7 @@
         var on = max > 200 && scrollY > max * 0.4;
         bar.classList.toggle('on', on);
         bar.setAttribute('aria-hidden', on ? 'false' : 'true');
+        if ('inert' in bar) bar.inert = !on;
       };
       addEventListener('scroll', toggleBar, { passive: true });
       toggleBar();
