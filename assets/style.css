@@ -368,33 +368,13 @@ noscript .reveal{opacity:1 !important;transform:none !important}
   .rail a.on{color:var(--accent)}
   .rail a.on::before{width:22px;opacity:1}
 }
-/* rendered bench plate behind the 3D box: depth only, never the hero */
-.pin .visual::before{content:"";position:absolute;right:-2%;top:50%;transform:translateY(-50%);
-  width:min(620px,104%);aspect-ratio:1200/943;background:url(img/ecu-plate.webp) center/contain no-repeat;
-  opacity:.12;filter:saturate(.6) contrast(.9) blur(7px);pointer-events:none}
-@media(max-width:980px){.pin .visual::before{opacity:.07;width:min(420px,100%)}}
-/* offer becomes the closing dark band */
-.offer{background:#0b0c0d;color:#e9edf0;border-top:1px solid #242a2e}
-.offer .in{border-color:#242a2e}
-.offer h2{color:#fff}
-.offer p{color:#b9c2c8}
-.offer .mono{color:#f2544a}
-.offer .btn{background:#c4242c;border-color:#c4242c;color:#fff}
-.offer .btn.ghost{color:#fff;border-color:#4b535a}
-.copyrow{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:18px}
-.copyrow code{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:#fff;
-  border:1px solid #3a4247;padding:10px 12px;background:#111619}
-.copyrow button{font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;
-  background:transparent;color:#8b939a;border:1px solid #3a4247;padding:10px 12px;cursor:pointer;min-height:44px}
-.copyrow button:hover{color:#fff;border-color:#8b939a}
-
-/* page-wide scroll progress (the pin band keeps its own) */
-.gprog{position:fixed;left:0;top:0;height:2px;width:100%;z-index:90;background:transparent;pointer-events:none}
-.gprog i{display:block;height:100%;width:100%;background:#c4242c;transform:scaleX(0);transform-origin:0 50%}
-
-/* type polish */
-h1,h2,h3{text-wrap:balance}
-.mono,.iconslab .k,.iconslab .v,.evband .lbl{font-variant-numeric:tabular-nums}
+/* callout legend: the drawing's labels, set as real text so they stay readable */
+.callouts{position:absolute;left:0;bottom:6px;display:grid;gap:6px;font-family:var(--mono);
+  font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#7f8d94;pointer-events:none}
+.callouts b{color:#f2544a;font-weight:400}
+.callouts span::before{content:"";display:inline-block;width:10px;height:1px;background:currentColor;
+  vertical-align:middle;margin-right:7px;opacity:.7}
+@media(max-width:980px){.callouts{position:static;margin-top:14px}}
 @media(max-width:400px){
   .pin .cta .btn{width:100%;justify-content:center}
 }
@@ -472,3 +452,9 @@ h1,h2,h3{text-wrap:balance}
   .evband .cpy,.evband .idx span{width:22px}
   .evband .cpy{height:46px}
 }
+.hero-dark .blueprint{position:absolute;inset:0;width:100%;height:100%;opacity:.62;pointer-events:none;
+  -webkit-mask-image:linear-gradient(105deg,#000 0%,#000 58%,transparent 92%);
+  mask-image:linear-gradient(105deg,#000 0%,#000 58%,transparent 92%)}
+@media(max-width:980px){.hero-dark .blueprint{opacity:.3;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 92%);
+  mask-image:linear-gradient(180deg,#000 0%,transparent 92%)}}

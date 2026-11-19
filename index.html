@@ -146,6 +146,91 @@
 </defs></svg>
 <div class="prog" aria-hidden="true"></div>
 <header class="hero-dark">
+<svg class="blueprint" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+ <defs>
+  <pattern id="bp-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#1c2328" stroke-width="1"/>
+  </pattern>
+ </defs>
+ <rect width="1200" height="700" fill="#0b0c0d"/>
+ <rect width="1200" height="700" fill="url(#bp-grid)" opacity=".55"/>
+
+ <g transform="translate(120 96)" stroke="#8fa0a8" fill="none" stroke-width="1.4">
+  <!-- enclosure -->
+  <rect x="0" y="120" width="620" height="300" rx="10"/>
+  <rect x="14" y="134" width="592" height="272" rx="6" stroke="#5d6c75"/>
+  <!-- lid lip + seam -->
+  <path d="M0 168h620" stroke="#5d6c75" stroke-dasharray="6 5"/>
+
+  <!-- heatsink fins -->
+  <g stroke="#7c8b93">
+   <path d="M40 60v52M64 52v60M88 44v68M112 36v76M136 28v84M160 20v92M184 12v100M208 4v108"/>
+  </g>
+  <path d="M28 120h208" stroke="#7c8b93"/>
+
+  <!-- pcb -->
+  <rect x="40" y="196" width="540" height="184" stroke="#5d6c75"/>
+  <g stroke="#4a5a63">
+   <path d="M40 226h540M40 256h540M40 286h540M40 316h540M40 346h540"/>
+   <path d="M100 196v184M180 196v184M260 196v184M340 196v184M420 196v184M500 196v184"/>
+  </g>
+
+  <!-- the flash chip (accent) -->
+  <g stroke="#f2544a">
+   <rect x="196" y="238" width="132" height="96" rx="3"/>
+   <g stroke="#f2544a" stroke-width="2.4">
+    <path d="M188 250h8M188 266h8M188 282h8M188 298h8M188 314h8"/>
+    <path d="M328 250h8M328 266h8M328 282h8M328 298h8M328 314h8"/>
+   </g>
+   <path d="M206 246h112" stroke-width=".8" opacity=".5"/>
+  </g>
+
+  <!-- connector block: 2 x 10 -->
+  <rect x="430" y="250" width="120" height="72" stroke="#7c8b93"/>
+  <g fill="#7c8b93" stroke="none">
+   <!-- row 1 -->
+   <g>
+    <circle cx="444" cy="266" r="3"/><circle cx="456" cy="266" r="3"/><circle cx="468" cy="266" r="3"/>
+    <circle cx="480" cy="266" r="3"/><circle cx="492" cy="266" r="3"/><circle cx="504" cy="266" r="3"/>
+    <circle cx="516" cy="266" r="3"/><circle cx="528" cy="266" r="3"/><circle cx="540" cy="266" r="3"/>
+   </g>
+   <!-- row 2 -->
+   <g>
+    <circle cx="444" cy="306" r="3"/><circle cx="456" cy="306" r="3"/><circle cx="468" cy="306" r="3"/>
+    <circle cx="480" cy="306" r="3"/><circle cx="492" cy="306" r="3"/><circle cx="504" cy="306" r="3"/>
+    <circle cx="516" cy="306" r="3"/><circle cx="528" cy="306" r="3"/><circle cx="540" cy="306" r="3"/>
+   </g>
+  </g>
+
+  <!-- mounting bosses -->
+  <g stroke="#7c8b93">
+   <circle cx="24" cy="146" r="6"/><circle cx="596" cy="146" r="6"/>
+   <circle cx="24" cy="394" r="6"/><circle cx="596" cy="394" r="6"/>
+  </g>
+ </g>
+
+ <!-- callouts -->
+ <g font-family="ui-monospace,monospace" font-size="13" letter-spacing="1.6" fill="#a9b5bb">
+  <path d="M330 300 L470 300 L520 250" stroke="#f2544a" stroke-width="1.2" fill="none"/>
+  <text x="476" y="243" fill="#f2544a">29F800 · 1 MiB</text>
+
+  <path d="M520 240 L700 240 L740 200" stroke="#8fa0a8" stroke-width="1.2" fill="none"/>
+  <text x="700" y="192">2 × 10 · K-LINE</text>
+
+  <path d="M170 40 L170 8 L300 8" stroke="#8fa0a8" stroke-width="1.2" fill="none"/>
+  <text x="308" y="13">FINS · PASSIVE</text>
+
+  <path d="M60 520 L60 560 L250 560" stroke="#8fa0a8" stroke-width="1.2" fill="none"/>
+  <text x="258" y="565">CAL × 10 · ONE VARIES</text>
+ </g>
+
+ <!-- dimension -->
+ <g stroke="#5d6c75" stroke-width="1" fill="#93a1a8" font-family="ui-monospace,monospace" font-size="11">
+  <path d="M120 470h620" stroke-dasharray="4 4"/>
+  <path d="M120 462v16M740 462v16"/>
+  <text x="392" y="492" fill="#7c8b93">1 048 576 B</text>
+ </g>
+</svg>
   <div class="wrap hdbar">
     <a class="hdbrand" href="index.html"><span class="mark">RT</span> SIM4LKE ECU Calibration</a>
     <nav class="hdnav" aria-label="Page sections"><a href="#outcomes">Outcomes</a><a href="#checks">Checks</a><a href="contact.html">Contact</a></nav>
@@ -170,6 +255,11 @@
         <div class="conn"><i></i><i></i></div>
       </div>
       <div class="chipcard"><div><b>29F800</b><span>1 MiB &#183; PSOP-44</span></div></div>
+      <div class="callouts" aria-hidden="true">
+        <span><b>29F800</b> flash &#183; 1 MiB</span>
+        <span>cal &#215; 10 &#183; one varies</span>
+        <span>2 &#215; 10 &#183; k-line</span>
+      </div>
       <div class="stampwrap"><div class="stamp2"><b>EXAMINED</b><span>EVERY BYTE &#183; EVERY READER</span></div></div>
     </div>
 
@@ -217,9 +307,9 @@
     <div class="tile"><span class="idx">10</span><svg viewBox="0 0 72 72" style="--s:1.18" aria-hidden="true"><use href="#i-conn"/></svg><span class="k">Connector</span><span class="v">OBD</span></div>
     <div class="tile"><span class="idx">11</span><svg viewBox="0 0 72 72" style="--s:1.06" aria-hidden="true"><use href="#i-readers"/></svg><span class="k">Readers</span><span class="v">LIVE</span></div>
     <div class="tile"><span class="idx">12</span><svg viewBox="0 0 72 72" style="--s:1.24" aria-hidden="true"><use href="#i-limiter"/></svg><span class="k">Limiters</span><span class="v">CAPPED</span></div>
-</div></div><section class="evband"><div class="wrap in">
+</div></div><section class="evband" id="evidence"><div class="wrap in">
   <div>
-    <div class="lbl">the same map, ten times</div>
+    <div class="lbl">03 &#183; the same map, ten times</div>
     <h3>Ten copies of the calibration. One of them is not like the others.</h3>
     <p>A SIM4LKE image repeats its calibration ten times. Copy 08 carries a different variant — so a
        change written to the first nine is a change the tenth copy never sees.</p>
@@ -324,7 +414,7 @@
   </div>
 </div>
 </main>
-<nav class="rail" aria-label="Sections"><a href="#outcomes">01 outcomes</a><a href="#checks">02 checks</a><a href="#contact">04 offer</a></nav>
+<nav class="rail" aria-label="Sections"><a href="#outcomes">01 outcomes</a><a href="#checks">02 checks</a><a href="#evidence">03 evidence</a><a href="#contact">04 offer</a></nav>
 <div class="gprog" aria-hidden="true"><i></i></div>
 <div class="barcta" aria-hidden="true"><b>first two free</b><a href="mailto:huyezarc@gmail.com?subject=My%20tune%20file%20-%20open%20it%20before%20I%20flash%20it&amp;body=My%20SIM4LKE%20ECU%20file%20is%20attached.%0A%0AIt%20is%3A%20a%20tune%20%2F%20a%20stock%20ROM%20%2F%20a%20read%20off%20the%20car%0AWhat%20I%20want%20to%20know%3A%20">Send a file &#8594;</a></div>
 
