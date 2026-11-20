@@ -420,8 +420,9 @@ h1,h2,h3{text-wrap:balance}
 .turbine{display:none}
 .specplate{display:none}
 @media(min-width:981px){
-  .pin .visual .turbine{display:block;width:min(470px,80%);height:auto;margin:4px auto 0;
+  .pin .visual .turbine{display:block;width:min(430px,78%);margin:6px auto 0;
     filter:drop-shadow(0 26px 44px rgba(0,0,0,.6))}
+  .pin .visual .turbine img{display:block;width:100%;height:auto}
   .pin .visual::after{content:"";position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);
     width:min(560px,92%);aspect-ratio:1;pointer-events:none;z-index:-1;
     background:radial-gradient(circle,rgba(242,84,74,.14),transparent 62%)}
