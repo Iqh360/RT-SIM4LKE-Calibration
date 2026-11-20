@@ -104,10 +104,12 @@
   <text x="392" y="492" fill="#7c8b93">1 MiB</text>
  </g>
 </svg>
-  <div class="wrap hdbar">
-    <a class="hdbrand" href="index.html"><span class="mark">RT</span> SIM4LKE ECU Calibration</a>
-    <nav class="hdnav" aria-label="Page sections"><a href="index.html#outcomes">Outcomes</a><a href="index.html#checks">Checks</a><a href="#send">Contact</a></nav>
-    <span class="live"><i></i>one address &#183; attach the file</span>
+  <div class="hdbar">
+    <div class="hdwrap">
+      <a class="hdbrand" href="index.html"><span class="mark">RT</span> SIM4LKE ECU Calibration</a>
+      <nav class="hdnav" aria-label="Page sections"><a href="index.html#outcomes">Outcomes</a><a href="index.html#checks">Checks</a><a href="#send">Contact</a></nav>
+      <span class="live"><i></i>one address &#183; attach the file</span>
+    </div>
   </div>
 </header>
 
@@ -196,6 +198,184 @@
 </footer>
 
 
+
+<script src="assets/vendor/gsap.min.js" defer></script>
+<script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+<script defer>
+  document.addEventListener('DOMContentLoaded', function () {
+    var pin = document.getElementById('pin');
+    if (!pin) return;
+    var steps = Array.prototype.slice.call(document.querySelectorAll('.pin .step'));
+    var prog = document.querySelector('.prog');
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // the bar is fixed; give it a solid backdrop as soon as the hero leaves
+    var hb = document.querySelector('.hdbar');
+    if (hb) {
+      var barState = function () { hb.classList.toggle('scrolled', scrollY > 8); };
+      addEventListener('scroll', barState, { passive: true });
+      addEventListener('resize', barState);
+      barState();
+    }
+
+
+
+
+
+    // copy the address (the button exists but had no handler)
+    var cm = document.getElementById('copyMail');
+    if (cm) {
+      cm.addEventListener('click', function () {
+        var v = cm.getAttribute('data-mail');
+        var done = function () { cm.textContent = 'copied'; setTimeout(function () { cm.textContent = 'copy'; }, 1600); };
+        if (navigator.clipboard) { navigator.clipboard.writeText(v).then(done, done); }
+        else {
+          var ta = document.createElement('textarea'); ta.value = v; document.body.appendChild(ta);
+          ta.select(); try { document.execCommand('copy'); } catch (e) {} ta.remove(); done();
+        }
+      });
+    }
+
+    // cursor tilt on the icon slab
+    var slab = document.querySelector('.iconslab');
+    if (slab && !reduce && matchMedia('(hover:hover)').matches) {
+      [].slice.call(slab.querySelectorAll('.tile')).forEach(function (tile) {
+        tile.addEventListener('pointermove', function (ev) {
+          var r = tile.getBoundingClientRect();
+          tile.style.setProperty('--ty', ((ev.clientX - r.left) / r.width - 0.5) * 14 + 'deg');
+          tile.style.setProperty('--tx', (-((ev.clientY - r.top) / r.height - 0.5) * 10) + 'deg');
+        });
+        tile.addEventListener('pointerleave', function () {
+          tile.style.setProperty('--ty', '0deg'); tile.style.setProperty('--tx', '0deg');
+        });
+      });
+    }
+
+    var gp = document.querySelector('.gprog i');
+    if (gp) {
+      var draw = function () {
+        var max = document.body.scrollHeight - innerHeight;
+        gp.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, scrollY / max) : 0) + ')';
+      };
+      addEventListener('scroll', draw, { passive: true });
+      addEventListener('resize', draw);
+      draw();
+    }
+
+    var rail = document.querySelector('.rail');
+    if (rail) {
+      var links = [].slice.call(rail.querySelectorAll('a'));
+      var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+      var setOn = function (el) {
+        links.forEach(function (a, i) { a.classList.toggle('on', targets[i] === el); });
+      };
+      if ('IntersectionObserver' in window) {
+        var rio = new IntersectionObserver(function (es) {
+          es.forEach(function (en) { if (en.isIntersecting) setOn(en.target); });
+        }, { rootMargin: '-45% 0px -45% 0px' });
+        targets.forEach(function (t) { if (t) rio.observe(t); });
+      }
+    }
+
+    var bar = document.querySelector('.barcta');
+    if (bar) {
+      var toggleBar = function () {
+        var max = document.body.scrollHeight - innerHeight;
+        var on = max > 200 && scrollY > max * 0.4;
+        bar.classList.toggle('on', on);
+        bar.setAttribute('aria-hidden', on ? 'false' : 'true');
+        if ('inert' in bar) bar.inert = !on;
+      };
+      addEventListener('scroll', toggleBar, { passive: true });
+      toggleBar();
+    }
+
+    // one-way reveal: an element that has been seen never fades out again
+    var revealEls = Array.prototype.slice.call(
+      document.querySelectorAll('main > section:not(#pin), main > div.offer, footer'));
+    if (!reduce && 'IntersectionObserver' in window) {
+      revealEls.forEach(function (el) { el.classList.add('reveal'); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.06 });
+      revealEls.forEach(function (el) { io.observe(el); });
+      // safety net: a jump (anchor link, restored scroll) can skip a section without ever
+      // intersecting it, which would leave it invisible. Anything already above the fold is shown.
+      var ticking = false;
+      function sweep() {
+        ticking = false;
+        revealEls.forEach(function (el) {
+          if (!el.classList.contains('in') && el.getBoundingClientRect().top < innerHeight * 0.95) {
+            el.classList.add('in');
+            io.unobserve(el);
+          }
+        });
+      }
+      window.addEventListener('scroll', function () {
+        if (!ticking) { ticking = true; requestAnimationFrame(sweep); }
+      }, { passive: true });
+      window.addEventListener('load', sweep);
+      sweep();
+    }
+    if (reduce) { steps.forEach(function (s) { s.classList.add('on'); }); return; }
+    if (!window.gsap || !window.ScrollTrigger) { steps.forEach(function (s) { s.classList.add('on'); }); return; }
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.matchMedia().add('(min-width: 981px)', function () {
+      gsap.set('.pin .stamp2', { scale: 1.4 });
+      var maxIdx = 0;
+      var tl = gsap.timeline({ scrollTrigger: {
+        anticipatePin: 1, invalidateOnRefresh: true,
+        trigger: pin, start: 'top top', end: '+=220%', pin: true, scrub: 0.6,
+        onUpdate: function (self) {
+          var p = self.progress;
+          if (prog) prog.style.transform = 'scaleX(' + p + ')';
+          var idx = p < 0.34 ? 0 : (p < 0.68 ? 1 : 2);
+          if (idx < maxIdx) idx = maxIdx;            // never un-show a caption you already reached
+          maxIdx = idx;
+          steps.forEach(function (s, i) { s.classList.toggle('on', i <= idx); });
+        }
+      }});
+      tl.to('.pin .turbine', { scale: 1.045, yPercent: -1.6, rotate: -1.6, ease: 'none' }, 0)
+        .to('.pin .turbine', { scale: 1.0, yPercent: 0, rotate: 0.8, ease: 'none' }, 0.55)
+        .to('.pin .scene', { rotateY: 26, rotateX: -8, ease: 'none' }, 0)
+        .to('.pin .scene', { rotateY: 118, ease: 'none' }, 0.5)
+        .to('.pin .chipcard', { opacity: 1, duration: 0.3, ease: 'none' }, 0.25)
+        .to('.pin .stamp2', { opacity: 1, duration: 0.25, ease: 'back.out(2)' }, 0.74);
+      // leaving the pinned range must hand the scene back to CSS, otherwise GSAP's inline
+      // transform survives the resize and the box sits up to 27px off centre on a phone
+      return function () {
+        gsap.set(['.pin .scene', '.pin .chipcard', '.pin .stamp2'],
+                { clearProps: 'transform,opacity' });
+        if (prog) prog.style.transform = 'scaleX(0)';
+      };
+    });
+
+    // a resize across the pin breakpoint leaves GSAP's inline transform behind: the box then sits
+    // up to 28px off centre and can clip the stage. Clear it and re-sync ScrollTrigger once the
+    // user stops dragging.
+    var resizeTimer;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        if (!window.matchMedia('(min-width: 981px)').matches) {
+          gsap.set(['.pin .scene', '.pin .chipcard', '.pin .stamp2'], { clearProps: 'transform,opacity' });
+          steps.forEach(function (s) { s.classList.add('on'); });
+        }
+        if (window.ScrollTrigger) ScrollTrigger.refresh();
+      }, 150);
+    });
+
+    // below 981px the band is normal flow: show every caption, hide the progress rule
+    gsap.matchMedia().add('(max-width: 980px)', function () {
+      steps.forEach(function (s) { s.classList.add('on'); });
+      if (prog) prog.style.display = 'none';
+      return function () {};
+    });
+  });
+</script>
 
 </body>
 </html>

@@ -87,7 +87,7 @@
     <path d="M44 35l8-4" stroke="#c4242c" stroke-width="1.6" stroke-linecap="round"/>
   </symbol>
 
-  <!-- 7 repeated regions -->
+  <!-- 7 10 copies -->
   <symbol id="i-copies" viewBox="0 0 72 72">
     <path d="M10 44l24-12 26 6-24 12z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
     <path d="M10 44v6l26 5v-6z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
@@ -97,7 +97,7 @@
     <path d="M20 42l16-8" stroke="#c4242c" stroke-width="1.9" stroke-linecap="round"/>
   </symbol>
 
-  <!-- 8 dormant table -->
+  <!-- 8 unread table -->
   <symbol id="i-unread" viewBox="0 0 72 72">
     <path d="M12 38l24-12 24 10-24 12z" fill="url(#T)" stroke="currentColor" stroke-width="1.2"/>
     <path d="M12 38v7l24 5v-6z" fill="url(#L)" stroke="currentColor" stroke-width="1.2"/>
@@ -231,10 +231,12 @@
   <text x="392" y="492" fill="#7c8b93">1 MiB</text>
  </g>
 </svg>
-  <div class="wrap hdbar">
-    <a class="hdbrand" href="index.html"><span class="mark">RT</span> SIM4LKE ECU Calibration</a>
-    <nav class="hdnav" aria-label="Page sections"><a href="#outcomes">Outcomes</a><a href="#checks">Checks</a><a href="contact.html">Contact</a></nav>
-    <span class="live"><i></i>dossier open &#183; bench live</span>
+  <div class="hdbar">
+    <div class="hdwrap">
+      <a class="hdbrand" href="index.html"><span class="mark">RT</span> SIM4LKE ECU Calibration</a>
+      <nav class="hdnav" aria-label="Page sections"><a href="#outcomes">Outcomes</a><a href="#checks">Checks</a><a href="contact.html">Contact</a></nav>
+      <span class="live"><i></i>dossier open &#183; bench live</span>
+    </div>
   </div>
 </header>
 
@@ -362,18 +364,18 @@
 </dl>
 
 <div class="iconslab"><div class="strip">
-    <div class="tile"><span class="idx">01</span><svg viewBox="0 0 72 72" style="--s:1.06" aria-hidden="true"><use href="#i-ecu"/></svg><span class="k">ECU unit</span><span class="v">SENT</span></div>
-    <div class="tile"><span class="idx">02</span><svg viewBox="0 0 72 72" style="--s:1.22" aria-hidden="true"><use href="#i-chip"/></svg><span class="k">29F800</span><span class="v">1 MiB</span></div>
-    <div class="tile"><span class="idx">03</span><svg viewBox="0 0 72 72" style="--s:1.14" aria-hidden="true"><use href="#i-caliper"/></svg><span class="k">Caliper</span><span class="v">BAND</span></div>
-    <div class="tile"><span class="idx">04</span><svg viewBox="0 0 72 72" style="--s:0.98" aria-hidden="true"><use href="#i-knock"/></svg><span class="k">Knock ladder</span><span class="v hot">TIMING</span></div>
-    <div class="tile"><span class="idx">05</span><svg viewBox="0 0 72 72" style="--s:1.0" aria-hidden="true"><use href="#i-comp"/></svg><span class="k">Kompressor</span><span class="v">M271</span></div>
-    <div class="tile"><span class="idx">06</span><svg viewBox="0 0 72 72" style="--s:1.16" aria-hidden="true"><use href="#i-plate"/></svg><span class="k">1 MiB image</span><span class="v">BYTES</span></div>
-    <div class="tile"><span class="idx">07</span><svg viewBox="0 0 72 72" style="--s:1.02" aria-hidden="true"><use href="#i-copies"/></svg><span class="k">Repeated regions</span><span class="v">MAP</span></div>
-    <div class="tile"><span class="idx">08</span><svg viewBox="0 0 72 72" style="--s:1.0" aria-hidden="true"><use href="#i-unread"/></svg><span class="k">Dormant table</span><span class="v hot">PLACEBO</span></div>
-    <div class="tile"><span class="idx">09</span><svg viewBox="0 0 72 72" style="--s:1.04" aria-hidden="true"><use href="#i-lambda"/></svg><span class="k">Lambda</span><span class="v">AFR</span></div>
+    <div class="tile"><span class="idx">01</span><svg viewBox="0 0 72 72" style="--s:1.0" aria-hidden="true"><use href="#i-ecu"/></svg><span class="k">ECU unit</span><span class="v">SENT</span></div>
+    <div class="tile"><span class="idx">02</span><svg viewBox="0 0 72 72" style="--s:1.37" aria-hidden="true"><use href="#i-chip"/></svg><span class="k">29F800</span><span class="v">1 MiB</span></div>
+    <div class="tile"><span class="idx">03</span><svg viewBox="0 0 72 72" style="--s:1.04" aria-hidden="true"><use href="#i-caliper"/></svg><span class="k">Caliper</span><span class="v">BAND</span></div>
+    <div class="tile"><span class="idx">04</span><svg viewBox="0 0 72 72" style="--s:0.91" aria-hidden="true"><use href="#i-knock"/></svg><span class="k">Knock ladder</span><span class="v hot">TIMING</span></div>
+    <div class="tile"><span class="idx">05</span><svg viewBox="0 0 72 72" style="--s:1.05" aria-hidden="true"><use href="#i-comp"/></svg><span class="k">Kompressor</span><span class="v">M271</span></div>
+    <div class="tile"><span class="idx">06</span><svg viewBox="0 0 72 72" style="--s:1.14" aria-hidden="true"><use href="#i-plate"/></svg><span class="k">1 MiB plate</span><span class="v">BYTES</span></div>
+    <div class="tile"><span class="idx">07</span><svg viewBox="0 0 72 72" style="--s:0.85" aria-hidden="true"><use href="#i-copies"/></svg><span class="k">10 copies</span><span class="v">10x</span></div>
+    <div class="tile"><span class="idx">08</span><svg viewBox="0 0 72 72" style="--s:0.95" aria-hidden="true"><use href="#i-unread"/></svg><span class="k">Unread table</span><span class="v hot">PLACEBO</span></div>
+    <div class="tile"><span class="idx">09</span><svg viewBox="0 0 72 72" style="--s:1.12" aria-hidden="true"><use href="#i-lambda"/></svg><span class="k">Lambda</span><span class="v">AFR</span></div>
     <div class="tile"><span class="idx">10</span><svg viewBox="0 0 72 72" style="--s:1.18" aria-hidden="true"><use href="#i-conn"/></svg><span class="k">Connector</span><span class="v">OBD</span></div>
-    <div class="tile"><span class="idx">11</span><svg viewBox="0 0 72 72" style="--s:1.06" aria-hidden="true"><use href="#i-readers"/></svg><span class="k">Readers</span><span class="v">LIVE</span></div>
-    <div class="tile"><span class="idx">12</span><svg viewBox="0 0 72 72" style="--s:1.24" aria-hidden="true"><use href="#i-limiter"/></svg><span class="k">Limits</span><span class="v">CAPPED</span></div>
+    <div class="tile"><span class="idx">11</span><svg viewBox="0 0 72 72" style="--s:1.01" aria-hidden="true"><use href="#i-readers"/></svg><span class="k">Readers</span><span class="v">LIVE</span></div>
+    <div class="tile"><span class="idx">12</span><svg viewBox="0 0 72 72" style="--s:0.88" aria-hidden="true"><use href="#i-limiter"/></svg><span class="k">Limiters</span><span class="v">CAPPED</span></div>
 </div></div><section class="evband" id="evidence"><div class="wrap in">
   <div>
     <div class="lbl">03 &#183; what a file hides</div>
@@ -501,6 +503,16 @@
     var steps = Array.prototype.slice.call(document.querySelectorAll('.pin .step'));
     var prog = document.querySelector('.prog');
     var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // the bar is fixed; give it a solid backdrop as soon as the hero leaves
+    var hb = document.querySelector('.hdbar');
+    if (hb) {
+      var barState = function () { hb.classList.toggle('scrolled', scrollY > 8); };
+      addEventListener('scroll', barState, { passive: true });
+      addEventListener('resize', barState);
+      barState();
+    }
+
 
 
 

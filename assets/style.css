@@ -460,56 +460,55 @@ h1,h2,h3{text-wrap:balance}
   .prog{display:none}
 }
 
-/* idle life: each icon floats on its own phase */
-.iconslab .tile svg{animation:icfloat 8.5s ease-in-out infinite}
-.iconslab .tile:nth-child(2n) svg{animation-delay:-2.1s}
-.iconslab .tile:nth-child(3n) svg{animation-delay:-3.6s}
-.iconslab .tile:nth-child(4n) svg{animation-delay:-5.2s}
-@keyframes icfloat{0%,100%{translate:0 0}50%{translate:0 -4px}}
-
-/* cursor tilt: JS sets --tx/--ty per tile */
+/* No idle drift: a staggered float moved each icon 0-4px out of line with its own label,
+   which reads as an untidy grid. Motion is reserved for hover/focus. */
 .iconslab .tile{transform:perspective(700px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));
   transition:transform .35s cubic-bezier(.2,.8,.2,1),background .35s}
 .iconslab .tile:hover{background:#101518}
 
-/* hover: a full turn plus the red rule sweeping under the label */
-.iconslab .tile svg{transition:transform .9s cubic-bezier(.2,.8,.2,1),opacity .2s}
+.iconslab .tile svg{transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .2s}
 .iconslab .tile:hover svg,.iconslab .tile:focus-within svg{
-  animation:none;opacity:1;transform:scale(calc(var(--s,1) * 1.08)) rotateY(360deg)}
+  opacity:1;transform:translateY(-4px) scale(calc(var(--s,1) * 1.06))}
 .iconslab .tile .k{position:relative}
-.iconslab .tile .k::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:#f2544a;
-  transition:width .45s cubic-bezier(.2,.8,.2,1)}
-.iconslab .tile:hover .k::after,.iconslab .tile:focus-within .k::after{width:100%}
+.iconslab .tile .k::after{content:"";position:absolute;left:50%;bottom:-7px;height:2px;width:0;
+  background:#f2544a;transform:translateX(-50%);transition:width .45s cubic-bezier(.2,.8,.2,1)}
+.iconslab .tile:hover .k::after,.iconslab .tile:focus-within .k::after{width:26px}
 .iconslab .tile:hover .idx{color:#f2544a}
 
 @media(prefers-reduced-motion:reduce){
-  .iconslab .tile svg{animation:none;transition:none}
-  .iconslab .tile:hover svg{transform:scale(var(--s,1))}
+  .iconslab .tile svg{transition:none}
+  .iconslab .tile:hover svg,.iconslab .tile:focus-within svg{transform:scale(var(--s,1))}
   .iconslab .tile{transform:none}
 }
-.iconslab{background:#0b0c0d;color:#e9edf0;border-bottom:1px solid #242a2e;position:relative;z-index:2}
+.iconslab{color:#e9edf0;border-bottom:1px solid #242a2e;position:relative;z-index:2;
+  background-color:#0b0c0d;
+  background-image:
+    radial-gradient(70% 120% at 8% -20%,rgba(242,84,74,.13),transparent 62%),
+    linear-gradient(to right,rgba(255,255,255,.032) 1px,transparent 1px),
+    linear-gradient(to bottom,rgba(255,255,255,.032) 1px,transparent 1px);
+  background-size:auto,48px 48px,48px 48px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
 .iconslab::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.05;mix-blend-mode:screen;
   background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/></filter><rect width='160' height='160' filter='url(%23n)'/></svg>")}
 .iconslab .strip{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));max-width:none}
-.iconslab .tile{position:relative;z-index:1;padding:26px 18px 20px;border-right:1px solid #242a2e;
-  border-bottom:1px solid #242a2e;display:grid;justify-items:start;gap:10px;overflow:hidden;min-width:0}
+.iconslab .tile{position:relative;z-index:1;padding:28px 16px 22px;border-right:1px solid #242a2e;
+  border-bottom:1px solid #242a2e;display:grid;justify-items:center;text-align:center;gap:11px;
+  overflow:hidden;min-width:0}
 .iconslab .tile:nth-child(6n){border-right:0}
-.iconslab .tile .idx{position:absolute;left:18px;top:16px;font-family:var(--mono);font-size:10px;
-  line-height:1;letter-spacing:.18em;color:#8b939a}
-.iconslab .tile svg{width:88px;height:88px;color:#c9d1d6;display:block;opacity:1;
-  transform:scale(var(--s,1));transform-origin:left center;transition:transform .25s ease}
+.iconslab .tile .idx{position:absolute;left:14px;top:14px;font-family:var(--mono);font-size:10.5px;
+  line-height:1;letter-spacing:.16em;color:#8b939a}
+.iconslab .tile svg{width:84px;height:84px;color:#c9d1d6;display:block;opacity:1;
+  transform:scale(var(--s,1));transform-origin:center center}
 .iconslab .tile{perspective:600px}
-.iconslab .tile:hover svg,.iconslab .tile:focus-within svg{opacity:1;
-  transform:translateY(-3px) scale(1.04)}
 .iconslab .tile:focus-within{outline:2px solid #f2544a;outline-offset:-3px}
-.iconslab .tile .k{font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:#fff}
-.iconslab .tile .v{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:#7d858c}
+.iconslab .tile .k{font-family:var(--mono);font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;color:#fff}
+.iconslab .tile .v{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:#8b939a}
 .iconslab .tile .v.hot{color:#f2544a}
 @media(max-width:980px){
   .iconslab .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .iconslab .tile{padding:18px 12px 14px}
+  .iconslab .tile{padding:20px 12px 16px;gap:9px}
   .iconslab .tile svg{width:64px;height:64px}
-  .iconslab .tile .idx{left:12px;top:12px;font-size:9px}
+  .iconslab .tile .idx{left:11px;top:11px;font-size:10px}
   .iconslab .tile:nth-child(6n){border-right:1px solid #242a2e}
   .iconslab .tile:nth-child(2n){border-right:0}
 }
@@ -555,3 +554,45 @@ h1,h2,h3{text-wrap:balance}
 @media(max-width:980px){.hero-dark .blueprint{opacity:.3;
   -webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 92%);
   mask-image:linear-gradient(180deg,#000 0%,transparent 92%)}}
+
+.hero-dark{min-height:76px}
+/* the bar owns the full width; the inner wrap owns the 1200px gutter */
+.hero-dark .hdbar{position:fixed;left:0;right:0;top:0;z-index:70;padding:0;display:block;
+  background:transparent;border-bottom:1px solid transparent;
+  transition:background .25s ease,border-color .25s ease}
+.hero-dark .hdbar .hdwrap{display:flex;align-items:center;justify-content:space-between;gap:20px;width:100%;
+  max-width:1200px;margin:0 auto;padding:16px 20px}
+/* flat fill, not glass: the rest of the page is flat, keep the bar flat too */
+.hero-dark .hdbar.scrolled{background:#0b0c0d;border-bottom-color:#242a2e;
+  box-shadow:0 1px 0 rgba(255,255,255,.04)}
+/* anchor targets must clear the bar */
+main > section,.offer{scroll-margin-top:96px}
+/* one progress line is enough: the page rule at the very top already reads as progress */
+.prog{display:none}
+.gprog{z-index:95}
+@media(min-width:1500px){.hero-dark .hdbar .hdwrap{max-width:1320px}}
+@media(max-width:980px){.hero-dark .hdbar .hdwrap{flex-wrap:wrap;row-gap:10px;padding:12px 20px}}
+
+/* section rhythm: the blocks used to butt together (measured 0-1px) */
+#outcomes{padding-block:clamp(56px,7vw,88px) clamp(48px,5.5vw,72px)}
+#checks{padding-block:clamp(48px,5.5vw,72px) clamp(56px,7vw,88px)}
+#outcomes + #checks{border-top:1px solid var(--rule)}
+.offer{padding-block:clamp(64px,8vw,96px)}
+/* hierarchy: the hero headline was 40px while every section head was 50px */
+@media(min-width:1000px){
+  .pin .step h1{font-size:clamp(44px,4.2vw,60px);line-height:1.05}
+  .pin .step h2{font-size:clamp(30px,3vw,44px);line-height:1.1}
+}
+#outcomes .lab h2,#checks .lab h2,.offer h2{font-size:clamp(30px,4vw,44px);line-height:1.08}
+/* one body size instead of 14.5 / 15 / 15.5 / 16 / 16.5 */
+#outcomes .three article p{font-size:16px;line-height:1.6}
+#checks .q,#checks .a{font-size:16px;line-height:1.55}
+#checks .lede{font-size:clamp(17px,1.4vw,19px);line-height:1.55;margin-bottom:36px}
+.evband p{font-size:15.5px;line-height:1.6}
+.offer p{font-size:16.5px;line-height:1.6;margin-top:22px}
+/* micro-label floor: nothing a visitor reads sits below 10.5px */
+.rail a{font-size:11.5px}
+.scoperow dt{font-size:10.5px}
+.iconslab .tile .idx{font-size:11px}
+.iconslab .tile .v{font-size:11px;letter-spacing:.13em}
+.evband .rednote{font-size:11.5px;line-height:1.5;letter-spacing:.06em}
