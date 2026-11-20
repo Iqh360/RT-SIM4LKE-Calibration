@@ -243,6 +243,91 @@
 <div class="pin" id="pin">
   <div class="sticky">
     <div class="visual" aria-hidden="true">
+      <div class="benchbg"><svg class="blueprint" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+ <defs>
+  <pattern id="bp-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M40 0H0V40" fill="none" stroke="#1c2328" stroke-width="1"/>
+  </pattern>
+ </defs>
+ <rect width="1200" height="700" fill="#0b0c0d"/>
+ <rect width="1200" height="700" fill="url(#bp-grid)" opacity=".55"/>
+
+ <g transform="translate(120 96)" stroke="#8fa0a8" fill="none" stroke-width="1.4">
+  <!-- enclosure -->
+  <rect x="0" y="120" width="620" height="300" rx="10"/>
+  <rect x="14" y="134" width="592" height="272" rx="6" stroke="#5d6c75"/>
+  <!-- lid lip + seam -->
+  <path d="M0 168h620" stroke="#5d6c75" stroke-dasharray="6 5"/>
+
+  <!-- heatsink fins -->
+  <g stroke="#7c8b93">
+   <path d="M40 60v52M64 52v60M88 44v68M112 36v76M136 28v84M160 20v92M184 12v100M208 4v108"/>
+  </g>
+  <path d="M28 120h208" stroke="#7c8b93"/>
+
+  <!-- pcb -->
+  <rect x="40" y="196" width="540" height="184" stroke="#5d6c75"/>
+  <g stroke="#4a5a63">
+   <path d="M40 226h540M40 256h540M40 286h540M40 316h540M40 346h540"/>
+   <path d="M100 196v184M180 196v184M260 196v184M340 196v184M420 196v184M500 196v184"/>
+  </g>
+
+  <!-- the flash chip (accent) -->
+  <g stroke="#f2544a">
+   <rect x="196" y="238" width="132" height="96" rx="3"/>
+   <g stroke="#f2544a" stroke-width="2.4">
+    <path d="M188 250h8M188 266h8M188 282h8M188 298h8M188 314h8"/>
+    <path d="M328 250h8M328 266h8M328 282h8M328 298h8M328 314h8"/>
+   </g>
+   <path d="M206 246h112" stroke-width=".8" opacity=".5"/>
+  </g>
+
+  <!-- connector block: 2 x 10 -->
+  <rect x="430" y="250" width="120" height="72" stroke="#7c8b93"/>
+  <g fill="#7c8b93" stroke="none">
+   <!-- row 1 -->
+   <g>
+    <circle cx="444" cy="266" r="3"/><circle cx="456" cy="266" r="3"/><circle cx="468" cy="266" r="3"/>
+    <circle cx="480" cy="266" r="3"/><circle cx="492" cy="266" r="3"/><circle cx="504" cy="266" r="3"/>
+    <circle cx="516" cy="266" r="3"/><circle cx="528" cy="266" r="3"/><circle cx="540" cy="266" r="3"/>
+   </g>
+   <!-- row 2 -->
+   <g>
+    <circle cx="444" cy="306" r="3"/><circle cx="456" cy="306" r="3"/><circle cx="468" cy="306" r="3"/>
+    <circle cx="480" cy="306" r="3"/><circle cx="492" cy="306" r="3"/><circle cx="504" cy="306" r="3"/>
+    <circle cx="516" cy="306" r="3"/><circle cx="528" cy="306" r="3"/><circle cx="540" cy="306" r="3"/>
+   </g>
+  </g>
+
+  <!-- mounting bosses -->
+  <g stroke="#7c8b93">
+   <circle cx="24" cy="146" r="6"/><circle cx="596" cy="146" r="6"/>
+   <circle cx="24" cy="394" r="6"/><circle cx="596" cy="394" r="6"/>
+  </g>
+ </g>
+
+ <!-- callouts -->
+ <g font-family="ui-monospace,monospace" font-size="13" letter-spacing="1.6" fill="#a9b5bb">
+  <path d="M330 300 L470 300 L520 250" stroke="#f2544a" stroke-width="1.2" fill="none"/>
+  <text x="476" y="243" fill="#f2544a">29F800 · 1 MiB</text>
+
+  <path d="M520 240 L700 240 L740 200" stroke="#8fa0a8" stroke-width="1.2" fill="none"/>
+  <text x="700" y="192">2 × 10 · K-LINE</text>
+
+  <path d="M170 40 L170 8 L300 8" stroke="#8fa0a8" stroke-width="1.2" fill="none"/>
+  <text x="308" y="13">FINS · PASSIVE</text>
+
+  <path d="M60 520 L60 560 L250 560" stroke="#8fa0a8" stroke-width="1.2" fill="none"/>
+  <text x="258" y="565">CAL × 10 · ONE VARIES</text>
+ </g>
+
+ <!-- dimension -->
+ <g stroke="#5d6c75" stroke-width="1" fill="#93a1a8" font-family="ui-monospace,monospace" font-size="11">
+  <path d="M120 470h620" stroke-dasharray="4 4"/>
+  <path d="M120 462v16M740 462v16"/>
+  <text x="392" y="492" fill="#7c8b93">1 048 576 B</text>
+ </g>
+</svg></div>
       <div class="scene" id="scene">
         <div class="face f-top"></div><div class="face f-bottom"></div>
         <div class="face f-left"></div><div class="face f-right"></div>
@@ -546,6 +631,7 @@
       gsap.set('.pin .stamp2', { scale: 1.4 });
       var maxIdx = 0;
       var tl = gsap.timeline({ scrollTrigger: {
+        anticipatePin: 1, invalidateOnRefresh: true,
         trigger: pin, start: 'top top', end: '+=220%', pin: true, scrub: 0.6,
         onUpdate: function (self) {
           var p = self.progress;
@@ -556,7 +642,9 @@
           steps.forEach(function (s, i) { s.classList.toggle('on', i <= idx); });
         }
       }});
-      tl.to('.pin .scene', { rotateY: 26, rotateX: -8, ease: 'none' }, 0)
+      tl.to('.pin .turbine', { scale: 1.045, yPercent: -1.6, rotate: -1.6, ease: 'none' }, 0)
+        .to('.pin .turbine', { scale: 1.0, yPercent: 0, rotate: 0.8, ease: 'none' }, 0.55)
+        .to('.pin .scene', { rotateY: 26, rotateX: -8, ease: 'none' }, 0)
         .to('.pin .scene', { rotateY: 118, ease: 'none' }, 0.5)
         .to('.pin .chipcard', { opacity: 1, duration: 0.3, ease: 'none' }, 0.25)
         .to('.pin .stamp2', { opacity: 1, duration: 0.25, ease: 'back.out(2)' }, 0.74);

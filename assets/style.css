@@ -399,7 +399,13 @@ h1,h2,h3{text-wrap:balance}
 .mono,.iconslab .k,.iconslab .v,.evband .lbl{font-variant-numeric:tabular-nums}
 
 /* hero stage: scan line + idle bob (motion, not decoration) */
-.pin .visual{overflow:visible}
+.pin .visual{overflow:visible;position:relative}
+.pin .visual .benchbg{position:absolute;inset:-6% -10%;opacity:.085;pointer-events:none;z-index:0;
+  filter:blur(.4px);-webkit-mask-image:radial-gradient(58% 62% at 50% 48%,#000 30%,transparent 78%);
+  mask-image:radial-gradient(58% 62% at 50% 48%,#000 30%,transparent 78%)}
+.pin .visual .benchbg svg{width:100%;height:100%;display:block}
+.pin .visual .turbine,.pin .visual .scene{position:relative;z-index:1;will-change:transform}
+@media(max-width:980px){.pin .visual .benchbg{opacity:.06;inset:-4% -6%}}
 .pin .visual .scan{position:absolute;left:0;right:0;height:1px;background:linear-gradient(90deg,
   transparent,#f2544a 18%,#f2544a 82%,transparent);opacity:.55;pointer-events:none;
   animation:scanmove 6.5s cubic-bezier(.45,0,.55,1) infinite}
